@@ -264,8 +264,8 @@
     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js"></script>
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    <link rel="stylesheet" type="text/css" href="../../../itemParenteses.css" />
-    <link rel="stylesheet" type="text/css" href="../../../ambTeor.css" />
+    <link rel="stylesheet" type="text/css" href="../itemParenteses.css" />
+    <link rel="stylesheet" type="text/css" href="../ambTeor.css" />
     
     <style>
       body{
@@ -320,7 +320,19 @@
     
     <p class="exerc" text="4">Mostre que o cubo de um número natural pode ser escrito como a diferença de dois quadrados.</p>
     
-    <p class="sol"><span class="cqd"></span></p>
+    <p class="sol">
+      Seja \(a\) um número natural. Suponha que existem \(b, c \in \bbN\) tais que \(a^3 = b^2 - c^2\) = \((b + c)(b - c)\). Escrevendo \(a^3 = a^2a\), temos, sem perda de generalidade, que \(a^2 = b + c\) e \(a = b - c\). Disso segue que \(a^2 + a = 2b\) e \(a^2 - a = 2c\), ou seja, \(b = \frac{a^2 + a}{2}\) e \(c = \frac{a^2 - a}{2}\). Como \(b, c \in \bbN\), então \(a^2 + a\) e \(a^2 - a\) têm que ser números pares. Observe que não solucionamos o exercício. Supomos que fosse verdade o que o exercício pede para se demonstrar e chegamos em uma expressão para os naturais \(b\) e \(c\), dependendo de \(a\) e satisfazendo uma certa condição. Acontece que o raciocínio recíproco nos leva a solução, quer dizer, se mostrarmos que \(a^2 + a\) e \(a^2 - a\) são números pares, definindo \(b = \frac{a^2 + a}{2}\) e \(c = \frac{a^2 - a}{2}\), temos que
+      
+      \[
+        a^3 = \Big(\underbrace{\frac{a^2 + a}{2}}_{b} + \underbrace{\frac{a - a^2}{2}}_{c}\Big)\Big(\underbrace{\frac{a^2 + a}{2}}_{b} - \underbrace{\frac{a - a^2}{2}}_{c}\Big) = b^2 - c^2
+      \]
+      
+      Mostrar que \(a^2 + a\) e \(a^2 - a\) são números pares segue de duas observações:
+      <ol class=alfa>
+        <li>o produto de um número com ele mesmo mantém a paridade, ou seja, se \(a\) é par, então \(a^2\) também é par e se \(a\) é ímpar, então \(a^2\) também é ímpar;</li>
+        <li>soma (ou subtração) de dois pares é par e soma (ou subtração) de ímpares é par.<span class="cqd"></span></li>
+      </ol>
+    </p>
 
   </body>
   
