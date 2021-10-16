@@ -320,9 +320,28 @@
     
     <p class="exerc" text="6">Mostre que \(24 \mid n(n^2 - 1)(3n + 2)\), para todo \(n \in \bbN\).</p>
     
-    <p class="sol"><span class="cqd"></span></p>
+    <p class="sol">Vamos usar indução para mostrar esse fato. Se \(n = 1\), então \(n(n^2 - 1)(3n + 2) = 0\). Uma vez que \(24 \mid 0\), temos que a afirmação vale para \(n = 1\). Suponha que \(24 \mid k(k^2 - 1)(3k + 2)\), para algum \(k \in \bbN\), com \(k \ge 2\). Temos que mostrar que \(24 \mid (k + 1)\big((k + 1)^2 - 1\big)\big(3(k + 1) + 2\big)\). Observe que
+    
+    \[
+      \begin{split}
+        (k + 1)&\big((k + 1)^2 - 1\big)\big(3(k + 1) + 2\big) = (k + 1)(k^2 + 2k)(3k + 5)\\
+        &= k(k + 1)(k + 2)(3k + 5) \\
+        &= k(k + 1)(k - 1 + 3)(3k + 2 + 3) \\
+        &= k(k + 1)\big((k - 1)(3k + 2) + 3(k - 1) + 3(3k + 2) + 9\big) \\
+        &= k(k + 1)\big((k - 1)(3k + 2) + 3k - 3 + 9k + 6 + 9\big) \\
+        &= k(k + 1)\big((k - 1)(3k + 2) + 12(k + 1)\big) \\
+        &= k(k + 1)(k - 1)(3k + 2) + 12k(k + 1)(k + 1) \\
+        &= k(k^2 - 1)(3k + 2) + 12k(k + 1)^2
+      \end{split}
+    \]
+    
+    Por hipótese de indução, temos que \(24 \mid k(k^2 - 1)(3k + 2)\). Veja, finalmente, que \(k(k + 1)^2\) é sempre um número par, porque
+    <ol class=alfa>
+      <li>se \(k\) é par, então \(k + 1\) é ímpar e \((k + 1)^2\) também é ímpar; logo, \(k(k + 1)^2\) é par, já que o produto de par com ímpar é par;</li>
+      <li>se \(k\) é ímpar, então \(k + 1\) é par e \((k + 1)^2\) também é par; logo, \(k(k + 1)^2\) é par, já que o produto de ímpar com par é par.</li>
+    </ol>
+     Portanto, \(12k(k + 1)^2\) é divisível por \(24\), o que implica que \(24 \mid (k + 1)\big((k + 1)^2 - 1\big)\big(3(k + 1) + 2\big)\).<span class="cqd"></span></p>
 
   </body>
   
 </html>
-
