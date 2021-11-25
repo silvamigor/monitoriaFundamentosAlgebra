@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Lista 6 - Exercício 1 </title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": { fonts: ["TeX"] },
+        TeX: {
+          equationNumbers: { autoNumber: "AMS" },
+          Macros: {
+            fraka: ["\\mathfrak{a}"],
+            frakb: ["\\mathfrak{b}"],
+            frakc: ["\\mathfrak{c}"],
+            frakd: ["\\mathfrak{d}"],
+            frake: ["\\mathfrak{e}"],
+            frakf: ["\\mathfrak{f}"],
+            frakg: ["\\mathfrak{g}"],
+            frakh: ["\\mathfrak{h}"],
+            fraki: ["\\mathfrak{i}"],
+            frakj: ["\\mathfrak{j}"],
+            frakk: ["\\mathfrak{k}"],
+            frakl: ["\\mathfrak{l}"],
+            frakm: ["\\mathfrak{m}"],
+            frakn: ["\\mathfrak{n}"],
+            frako: ["\\mathfrak{o}"],
+            frakp: ["\\mathfrak{p}"],
+            frakq: ["\\mathfrak{q}"],
+            frakr: ["\\mathfrak{r}"],
+            fraks: ["\\mathfrak{s}"],
+            frakt: ["\\mathfrak{t}"],
+            fraku: ["\\mathfrak{u}"],
+            frakv: ["\\mathfrak{v}"],
+            frakx: ["\\mathfrak{x}"],
+            frakw: ["\\mathfrak{w}"],
+            fraky: ["\\mathfrak{y}"],
+            frakz: ["\\mathfrak{z}"],
+            frakA: ["\\mathfrak{A}"],
+            frakB: ["\\mathfrak{B}"],
+            frakC: ["\\mathfrak{C}"],
+            frakD: ["\\mathfrak{D}"],
+            frakE: ["\\mathfrak{E}"],
+            frakF: ["\\mathfrak{F}"],
+            frakG: ["\\mathfrak{G}"],
+            frakH: ["\\mathfrak{H}"],
+            frakI: ["\\mathfrak{I}"],
+            frakJ: ["\\mathfrak{J}"],
+            frakK: ["\\mathfrak{K}"],
+            frakL: ["\\mathfrak{L}"],
+            frakM: ["\\mathfrak{M}"],
+            frakN: ["\\mathfrak{N}"],
+            frakO: ["\\mathfrak{O}"],
+            frakP: ["\\mathfrak{P}"],
+            frakQ: ["\\mathfrak{Q}"],
+            frakR: ["\\mathfrak{R}"],
+            frakS: ["\\mathfrak{S}"],
+            frakT: ["\\mathfrak{T}"],
+            frakU: ["\\mathfrak{U}"],
+            frakV: ["\\mathfrak{V}"],
+            frakX: ["\\mathfrak{X}"],
+            frakW: ["\\mathfrak{W}"],
+            frakY: ["\\mathfrak{Y}"],
+            frakZ: ["\\mathfrak{Z}"],
+            frakgl: ["\\mathfrak{gl}"],
+            fraksl: ["\\mathfrak{sl}"],
+            bba: ["\\mathbb{a}"],
+            bbb: ["\\mathbb{b}"],
+            bbc: ["\\mathbb{c}"],
+            bbd: ["\\mathbb{d}"],
+            bbe: ["\\mathbb{e}"],
+            bbf: ["\\mathbb{f}"],
+            bbg: ["\\mathbb{g}"],
+            bbh: ["\\mathbb{h}"],
+            bbi: ["\\mathbb{i}"],
+            bbj: ["\\mathbb{j}"],
+            bbk: ["\\mathbb{k}"],
+            bbl: ["\\mathbb{l}"],
+            bbm: ["\\mathbb{m}"],
+            bbn: ["\\mathbb{n}"],
+            bbo: ["\\mathbb{o}"],
+            bbp: ["\\mathbb{p}"],
+            bbq: ["\\mathbb{q}"],
+            bbr: ["\\mathbb{r}"],
+            bbs: ["\\mathbb{s}"],
+            bbt: ["\\mathbb{t}"],
+            bbu: ["\\mathbb{u}"],
+            bbv: ["\\mathbb{v}"],
+            bbx: ["\\mathbb{x}"],
+            bbw: ["\\mathbb{w}"],
+            bby: ["\\mathbb{y}"],
+            bbz: ["\\mathbb{z}"],
+            bbA: ["\\mathbb{A}"],
+            bbB: ["\\mathbb{B}"],
+            bbC: ["\\mathbb{C}"],
+            bbD: ["\\mathbb{D}"],
+            bbE: ["\\mathbb{E}"],
+            bbF: ["\\mathbb{F}"],
+            bbG: ["\\mathbb{G}"],
+            bbH: ["\\mathbb{H}"],
+            bbI: ["\\mathbb{I}"],
+            bbJ: ["\\mathbb{J}"],
+            bbK: ["\\mathbb{K}"],
+            bbL: ["\\mathbb{L}"],
+            bbM: ["\\mathbb{M}"],
+            bbN: ["\\mathbb{N}"],
+            bbO: ["\\mathbb{O}"],
+            bbP: ["\\mathbb{P}"],
+            bbQ: ["\\mathbb{Q}"],
+            bbR: ["\\mathbb{R}"],
+            bbS: ["\\mathbb{S}"],
+            bbT: ["\\mathbb{T}"],
+            bbU: ["\\mathbb{U}"],
+            bbV: ["\\mathbb{V}"],
+            bbX: ["\\mathbb{X}"],
+            bbW: ["\\mathbb{W}"],
+            bbY: ["\\mathbb{Y}"],
+            bbZ: ["\\mathbb{Z}"],
+            cala: ["\\mathcal{a}"],
+            calb: ["\\mathcal{b}"],
+            calc: ["\\mathcal{c}"],
+            cald: ["\\mathcal{d}"],
+            cale: ["\\mathcal{e}"],
+            calf: ["\\mathcal{f}"],
+            calg: ["\\mathcal{g}"],
+            calh: ["\\mathcal{h}"],
+            cali: ["\\mathcal{i}"],
+            calj: ["\\mathcal{j}"],
+            calk: ["\\mathcal{k}"],
+            call: ["\\mathcal{l}"],
+            calm: ["\\mathcal{m}"],
+            caln: ["\\mathcal{n}"],
+            calo: ["\\mathcal{o}"],
+            calp: ["\\mathcal{p}"],
+            calq: ["\\mathcal{q}"],
+            calr: ["\\mathcal{r}"],
+            cals: ["\\mathcal{s}"],
+            calt: ["\\mathcal{t}"],
+            calu: ["\\mathcal{u}"],
+            calv: ["\\mathcal{v}"],
+            calx: ["\\mathcal{x}"],
+            calw: ["\\mathcal{w}"],
+            caly: ["\\mathcal{y}"],
+            calz: ["\\mathcal{z}"],
+            calA: ["\\mathcal{A}"],
+            calB: ["\\mathcal{B}"],
+            calC: ["\\mathcal{C}"],
+            calD: ["\\mathcal{D}"],
+            calE: ["\\mathcal{E}"],
+            calF: ["\\mathcal{F}"],
+            calG: ["\\mathcal{G}"],
+            calH: ["\\mathcal{H}"],
+            calI: ["\\mathcal{I}"],
+            calJ: ["\\mathcal{J}"],
+            calK: ["\\mathcal{K}"],
+            calL: ["\\mathcal{L}"],
+            calM: ["\\mathcal{M}"],
+            calN: ["\\mathcal{N}"],
+            calO: ["\\mathcal{O}"],
+            calP: ["\\mathcal{P}"],
+            calQ: ["\\mathcal{Q}"],
+            calR: ["\\mathcal{R}"],
+            calS: ["\\mathcal{S}"],
+            calT: ["\\mathcal{T}"],
+            calU: ["\\mathcal{U}"],
+            calV: ["\\mathcal{V}"],
+            calX: ["\\mathcal{X}"],
+            calW: ["\\mathcal{W}"],
+            calY: ["\\mathcal{Y}"],
+            calZ: ["\\mathcal{Z}"],
+            bfa: ["\\mathbf{a}"],
+            bfb: ["\\mathbf{b}"],
+            bfc: ["\\mathbf{c}"],
+            bfd: ["\\mathbf{d}"],
+            bfe: ["\\mathbf{e}"],
+            bff: ["\\mathbf{f}"],
+            bfg: ["\\mathbf{g}"],
+            bfh: ["\\mathbf{h}"],
+            bfi: ["\\mathbf{i}"],
+            bfj: ["\\mathbf{j}"],
+            bfk: ["\\mathbf{k}"],
+            bfl: ["\\mathbf{l}"],
+            bfm: ["\\mathbf{m}"],
+            bfn: ["\\mathbf{n}"],
+            bfo: ["\\mathbf{o}"],
+            bfp: ["\\mathbf{p}"],
+            bfq: ["\\mathbf{q}"],
+            bfr: ["\\mathbf{r}"],
+            bfs: ["\\mathbf{s}"],
+            bft: ["\\mathbf{t}"],
+            bfu: ["\\mathbf{u}"],
+            bfv: ["\\mathbf{v}"],
+            bfx: ["\\mathbf{x}"],
+            bfw: ["\\mathbf{w}"],
+            bfy: ["\\mathbf{y}"],
+            bfz: ["\\mathbf{z}"],
+            bfA: ["\\mathbf{A}"],
+            bfB: ["\\mathbf{B}"],
+            bfC: ["\\mathbf{C}"],
+            bfD: ["\\mathbf{D}"],
+            bfE: ["\\mathbf{E}"],
+            bfF: ["\\mathbf{F}"],
+            bfG: ["\\mathbf{G}"],
+            bfH: ["\\mathbf{H}"],
+            bfI: ["\\mathbf{I}"],
+            bfJ: ["\\mathbf{J}"],
+            bfK: ["\\mathbf{K}"],
+            bfL: ["\\mathbf{L}"],
+            bfM: ["\\mathbf{M}"],
+            bfN: ["\\mathbf{N}"],
+            bfO: ["\\mathbf{O}"],
+            bfP: ["\\mathbf{P}"],
+            bfQ: ["\\mathbf{Q}"],
+            bfR: ["\\mathbf{R}"],
+            bfS: ["\\mathbf{S}"],
+            bfT: ["\\mathbf{T}"],
+            bfU: ["\\mathbf{U}"],
+            bfV: ["\\mathbf{V}"],
+            bfX: ["\\mathbf{X}"],
+            bfW: ["\\mathbf{W}"],
+            bfY: ["\\mathbf{Y}"],
+            bfZ: ["\\mathbf{Z}"],
+            zero: ["\\{0\\}"],
+            id: ["\\operatorname\{id\}"],
+            sen: ["\\operatorname\{sen\}"],
+            tg: ["\\operatorname\{tg\}"],
+            ad: ["\\operatorname\{ad\}"],
+            mdc: ["\\operatorname\{mdc\}"],
+            im: ["\\operatorname\{im\}"],
+            Quat: ["\\operatorname\{Quat\}"],
+            Aut: ["\\operatorname\{Aut\}"],
+            Inn: ["\\operatorname\{Inn\}"],
+            orb: ["\\operatorname\{orb\}"],
+            stab: ["\\operatorname\{stab\}"],
+            Rep: ["\\operatorname\{Rep\}"],
+            Hom: ["\\operatorname\{Hom\}"],
+            End: ["\\operatorname\{End\}"],
+            Obj: ["\\operatorname\{Obj\}"],
+            tr: ["\\operatorname\{tr\}"],
+            diam: ["\\operatorname\{diam\}"],
+            diag: ["\\operatorname\{diag\}"],
+            Ind: ["\\operatorname\{Ind\}"],
+            Res: ["\\operatorname\{Res\}"],
+            Set: ["\\operatorname\{Set\}"],
+            coker: ["\\operatorname\{coker\}"],
+            supp: ["\\operatorname\{supp\}"],
+            Tor: ["\\operatorname\{Tor\}"],
+            vspan: ["\\operatorname\{vspan\}"],
+            mmc: ["\\operatorname\{mmc\}"],
+            pint: ["{ \\langle #1,#2 \\rangle }",2],
+            rfrac: ["{ {}^{#1}\\!/_{#2} }",2],
+            norma: ["{ \\Vert #1 \\Vert }",2],
+          },
+        },
+      });
+    </script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../itemParenteses.css" />
+    <link rel="stylesheet" type="text/css" href="../ambTeor.css" />
+    
+    <style>
+      body{
+        font-size: 14pt;
+        font-family: "Helvetica", sans-serif;
+        line-height: 1.5;
+        background-color: rgb(233,227,206);
+        counter-reset: contTeor contProp contLema contObs contDef contItemANI contItemNNI contItemRNI;
+      }
+      
+      h1{
+        background-color: rgb(0,128,0);
+        color: rgb(255,250,250);
+      }
+      
+      .exerc[text]:before {
+        font-weight: bold;
+        content: "Exercício " attr(text)". ";
+      }
+      
+      .sol:before {
+        font-weight: bold;
+        content: "Solução. ";
+      }
+      
+      .cqd:after {
+        content: "\25FC";
+        float:right;
+      }
+      
+      .itemAlfaNoIdent:before {
+        counter-increment: contItemANI;
+        content:"(" counter(contItemANI, lower-alpha)") ";
+      }
+      
+      .itemRomanoNoIdent:before {
+        counter-increment: contItemRNI;
+        content:"(" counter(contItemRNI, lower-roman)") ";
+      }
+      
+      .itemNumericoNoIdent:before {
+        counter-increment: contItemNNI;
+        content:"(" counter(contItemNNI)") ";
+      }
+      
+    </style>
+  </head>
+  
+  <body>
+  
+    <div style="text-align:center"><h1>Lista 6</h1></div>
+    
+    <p class="exerc" text="1">
+      Seja, para \(k \in \bbN \cup \zero\), \(F(k)\) o número de Fermat na forma \(2^{2^{k}} + 1\).
+      <ol class="alfa">
+        <li>Mostre que \(F(k + 1) = F(0)F(1)F(2)\cdots F(k) + 2\).</li>
+        <li>Mostre que se \(k_1\) e \(k_2\) são distintos, então \(\mdc(F(k_1), F(k_2)) = 1\).</li>
+        <li>Deduza da afirmação anterior que existem infinitos primos.</li>
+      </ol>
+    </p>
+    
+    <p class="sol"> A solução apresentada a seguir foi tirada do canal do Michael Penn no Youtube. Veja-a clicando <a href="https://youtu.be/L1_Y2nJL4Ys" target="_blank">aqui</a>.</p>
+      
+    <p>
+      (a) Vamos mostrar tal afirmação por indução sobre \(k\). Seja \(k = 0\). Então, por um lado, temos que \(F(k + 1) = F(1) = \) \(2^{2^{1}} + 1 = \) \(5\) e, por outro, \(F(0) + 2 = 2^{2^{0}} + 1 + 2 = \) \(5\). Logo, \(F(0 + 1) = F(0) + 2\). Suponha que \(F(k + 1) = F(0)F(1)F(2)\cdots F(k) + 2\), para algum \(k > 1\). Então temos que
+      \[
+        \begin{split}
+          \underbrace{F(0)F(1)\cdots F(k)}_{\text{hipótese de indução}}F(k+1) + 2 &= \big(F(k + 1) - 2\big)F(k+1) + 2 \\
+          &= F(k+1)^2 - 2F(k+1) + 2 \\
+          &= F(k+1)^2 - 2F(k+1) + 1 + 1 \\
+          &= (F(k+1) - 1)^2 + 1 \\
+          &= (2^{2^{k+1}} + 1 - 1)^2 + 1 \\
+          &= (2^{2^{k+1}})^2 + 1 \\
+          &= 2^{2\cdot 2^{k+1}} + 1 \\
+          &= 2^{2^{k+2}} + 1 \\
+          &= F(k + 2)
+        \end{split}
+      \]
+      Portanto, \(F(k + 1) = F(0)F(1)F(2)\cdots F(k) + 2\), para todo \(k \in \bbN \cup \zero\).
+    </p>
+    
+    <p>(b) Sejam \(k_1, k_2 \in \bbN \cup \zero\) números distintos. Sem perda de generalidade, suponha \(k_1 < k_2\). Pelo item (a), temos que \(F(k_2) = F(0)F(1)\cdots F(k_1) \cdots F(k_2 - 1) + 2\). Considere o número natural \(x = \frac{F(0)F(1)\cdots F(k_2 - 1)}{F(k_1)}\). Então 
+    \[
+      F(k_2) = \underbrace{F(0)F(1)\cdots F(k_1) \cdots F(k_2 - 1)}_{F(k_1)x} + 2.
+    \]
+      Logo, \(F(k_2) - F(k_1)x = 2\). Como \(\mdc(F(k_2), F(k_1))\) divide \(F(k_2)\) e \(F(k_1)\), então \(\mdc(F(k_2), F(k_1)) \mid 2\). Logo, \(\mdc(F(k_2), F(k_1)) = 1\) ou \(\mdc(F(k_2), F(k_1)) = 2\). Uma vez que \(F(k)\) é ímpar, para todo \(k\), então concluímos que \(\mdc(F(k_2), F(k_1)) = 1\).
+    </p>
+    
+    <p>(c) Para cada \(k \in \bbN \cup \zero\), defina \(p_k\) para ser um primo tal que divide F(k). Note que \(p_k\) existe, pois, pelo Teorema Fundamental da Aritmética, \(F(k)\) se fatora como produto de primos. Assim, \(p_k\) é qualquer um desses primos (ou o próprio \(F(k)\), no caso em que este é primo). Defina \(\varphi\) como sendo a função que sai de \(\bbN \cup \zero\) e chega no conjunto dos números primos, onde \(\varphi(k) = p_k\). Vamos mostrar que \(\varphi\) é injetiva, deduzindo daí que a quantidade de primos é maior do que ou igual a quantidade de naturais com o zero, o qual sabemos ser infinita, ou seja, vamos mostrar que \(\varphi\) é injetiva e concluir que a quantidade de primos é infinita. Sejam \(k_1, k_2 \in \bbN \cup \zero\) tais que \(\varphi(k_1) = \varphi(k_2)\). Suponha, por absurdo, que \(k_1 \neq k_2\). Pela definição de \(\varphi\), \(p_{k_1} = p_{k_2}\). Isso significa que \(p_{k_1} \mid F(k_1)\) e que \(p_{k_1} \mid F(k_2)\), o que contradiz o fato, visto no item (b), de que \(\mdc(F(k_1),F(k_2)) = 1\). Portanto, \(k_1 = k_2\), ou seja, \(\varphi\) é injetiva.<span class="cqd"></span></p>
+
+  </body>
+  
+</html>
+
