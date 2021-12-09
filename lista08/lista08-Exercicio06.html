@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Lista 8 - Exercício 6 </title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": { fonts: ["TeX"] },
+        TeX: {
+          equationNumbers: { autoNumber: "AMS" },
+          Macros: {
+            fraka: ["\\mathfrak{a}"],
+            frakb: ["\\mathfrak{b}"],
+            frakc: ["\\mathfrak{c}"],
+            frakd: ["\\mathfrak{d}"],
+            frake: ["\\mathfrak{e}"],
+            frakf: ["\\mathfrak{f}"],
+            frakg: ["\\mathfrak{g}"],
+            frakh: ["\\mathfrak{h}"],
+            fraki: ["\\mathfrak{i}"],
+            frakj: ["\\mathfrak{j}"],
+            frakk: ["\\mathfrak{k}"],
+            frakl: ["\\mathfrak{l}"],
+            frakm: ["\\mathfrak{m}"],
+            frakn: ["\\mathfrak{n}"],
+            frako: ["\\mathfrak{o}"],
+            frakp: ["\\mathfrak{p}"],
+            frakq: ["\\mathfrak{q}"],
+            frakr: ["\\mathfrak{r}"],
+            fraks: ["\\mathfrak{s}"],
+            frakt: ["\\mathfrak{t}"],
+            fraku: ["\\mathfrak{u}"],
+            frakv: ["\\mathfrak{v}"],
+            frakx: ["\\mathfrak{x}"],
+            frakw: ["\\mathfrak{w}"],
+            fraky: ["\\mathfrak{y}"],
+            frakz: ["\\mathfrak{z}"],
+            frakA: ["\\mathfrak{A}"],
+            frakB: ["\\mathfrak{B}"],
+            frakC: ["\\mathfrak{C}"],
+            frakD: ["\\mathfrak{D}"],
+            frakE: ["\\mathfrak{E}"],
+            frakF: ["\\mathfrak{F}"],
+            frakG: ["\\mathfrak{G}"],
+            frakH: ["\\mathfrak{H}"],
+            frakI: ["\\mathfrak{I}"],
+            frakJ: ["\\mathfrak{J}"],
+            frakK: ["\\mathfrak{K}"],
+            frakL: ["\\mathfrak{L}"],
+            frakM: ["\\mathfrak{M}"],
+            frakN: ["\\mathfrak{N}"],
+            frakO: ["\\mathfrak{O}"],
+            frakP: ["\\mathfrak{P}"],
+            frakQ: ["\\mathfrak{Q}"],
+            frakR: ["\\mathfrak{R}"],
+            frakS: ["\\mathfrak{S}"],
+            frakT: ["\\mathfrak{T}"],
+            frakU: ["\\mathfrak{U}"],
+            frakV: ["\\mathfrak{V}"],
+            frakX: ["\\mathfrak{X}"],
+            frakW: ["\\mathfrak{W}"],
+            frakY: ["\\mathfrak{Y}"],
+            frakZ: ["\\mathfrak{Z}"],
+            frakgl: ["\\mathfrak{gl}"],
+            fraksl: ["\\mathfrak{sl}"],
+            bba: ["\\mathbb{a}"],
+            bbb: ["\\mathbb{b}"],
+            bbc: ["\\mathbb{c}"],
+            bbd: ["\\mathbb{d}"],
+            bbe: ["\\mathbb{e}"],
+            bbf: ["\\mathbb{f}"],
+            bbg: ["\\mathbb{g}"],
+            bbh: ["\\mathbb{h}"],
+            bbi: ["\\mathbb{i}"],
+            bbj: ["\\mathbb{j}"],
+            bbk: ["\\mathbb{k}"],
+            bbl: ["\\mathbb{l}"],
+            bbm: ["\\mathbb{m}"],
+            bbn: ["\\mathbb{n}"],
+            bbo: ["\\mathbb{o}"],
+            bbp: ["\\mathbb{p}"],
+            bbq: ["\\mathbb{q}"],
+            bbr: ["\\mathbb{r}"],
+            bbs: ["\\mathbb{s}"],
+            bbt: ["\\mathbb{t}"],
+            bbu: ["\\mathbb{u}"],
+            bbv: ["\\mathbb{v}"],
+            bbx: ["\\mathbb{x}"],
+            bbw: ["\\mathbb{w}"],
+            bby: ["\\mathbb{y}"],
+            bbz: ["\\mathbb{z}"],
+            bbA: ["\\mathbb{A}"],
+            bbB: ["\\mathbb{B}"],
+            bbC: ["\\mathbb{C}"],
+            bbD: ["\\mathbb{D}"],
+            bbE: ["\\mathbb{E}"],
+            bbF: ["\\mathbb{F}"],
+            bbG: ["\\mathbb{G}"],
+            bbH: ["\\mathbb{H}"],
+            bbI: ["\\mathbb{I}"],
+            bbJ: ["\\mathbb{J}"],
+            bbK: ["\\mathbb{K}"],
+            bbL: ["\\mathbb{L}"],
+            bbM: ["\\mathbb{M}"],
+            bbN: ["\\mathbb{N}"],
+            bbO: ["\\mathbb{O}"],
+            bbP: ["\\mathbb{P}"],
+            bbQ: ["\\mathbb{Q}"],
+            bbR: ["\\mathbb{R}"],
+            bbS: ["\\mathbb{S}"],
+            bbT: ["\\mathbb{T}"],
+            bbU: ["\\mathbb{U}"],
+            bbV: ["\\mathbb{V}"],
+            bbX: ["\\mathbb{X}"],
+            bbW: ["\\mathbb{W}"],
+            bbY: ["\\mathbb{Y}"],
+            bbZ: ["\\mathbb{Z}"],
+            cala: ["\\mathcal{a}"],
+            calb: ["\\mathcal{b}"],
+            calc: ["\\mathcal{c}"],
+            cald: ["\\mathcal{d}"],
+            cale: ["\\mathcal{e}"],
+            calf: ["\\mathcal{f}"],
+            calg: ["\\mathcal{g}"],
+            calh: ["\\mathcal{h}"],
+            cali: ["\\mathcal{i}"],
+            calj: ["\\mathcal{j}"],
+            calk: ["\\mathcal{k}"],
+            call: ["\\mathcal{l}"],
+            calm: ["\\mathcal{m}"],
+            caln: ["\\mathcal{n}"],
+            calo: ["\\mathcal{o}"],
+            calp: ["\\mathcal{p}"],
+            calq: ["\\mathcal{q}"],
+            calr: ["\\mathcal{r}"],
+            cals: ["\\mathcal{s}"],
+            calt: ["\\mathcal{t}"],
+            calu: ["\\mathcal{u}"],
+            calv: ["\\mathcal{v}"],
+            calx: ["\\mathcal{x}"],
+            calw: ["\\mathcal{w}"],
+            caly: ["\\mathcal{y}"],
+            calz: ["\\mathcal{z}"],
+            calA: ["\\mathcal{A}"],
+            calB: ["\\mathcal{B}"],
+            calC: ["\\mathcal{C}"],
+            calD: ["\\mathcal{D}"],
+            calE: ["\\mathcal{E}"],
+            calF: ["\\mathcal{F}"],
+            calG: ["\\mathcal{G}"],
+            calH: ["\\mathcal{H}"],
+            calI: ["\\mathcal{I}"],
+            calJ: ["\\mathcal{J}"],
+            calK: ["\\mathcal{K}"],
+            calL: ["\\mathcal{L}"],
+            calM: ["\\mathcal{M}"],
+            calN: ["\\mathcal{N}"],
+            calO: ["\\mathcal{O}"],
+            calP: ["\\mathcal{P}"],
+            calQ: ["\\mathcal{Q}"],
+            calR: ["\\mathcal{R}"],
+            calS: ["\\mathcal{S}"],
+            calT: ["\\mathcal{T}"],
+            calU: ["\\mathcal{U}"],
+            calV: ["\\mathcal{V}"],
+            calX: ["\\mathcal{X}"],
+            calW: ["\\mathcal{W}"],
+            calY: ["\\mathcal{Y}"],
+            calZ: ["\\mathcal{Z}"],
+            bfa: ["\\mathbf{a}"],
+            bfb: ["\\mathbf{b}"],
+            bfc: ["\\mathbf{c}"],
+            bfd: ["\\mathbf{d}"],
+            bfe: ["\\mathbf{e}"],
+            bff: ["\\mathbf{f}"],
+            bfg: ["\\mathbf{g}"],
+            bfh: ["\\mathbf{h}"],
+            bfi: ["\\mathbf{i}"],
+            bfj: ["\\mathbf{j}"],
+            bfk: ["\\mathbf{k}"],
+            bfl: ["\\mathbf{l}"],
+            bfm: ["\\mathbf{m}"],
+            bfn: ["\\mathbf{n}"],
+            bfo: ["\\mathbf{o}"],
+            bfp: ["\\mathbf{p}"],
+            bfq: ["\\mathbf{q}"],
+            bfr: ["\\mathbf{r}"],
+            bfs: ["\\mathbf{s}"],
+            bft: ["\\mathbf{t}"],
+            bfu: ["\\mathbf{u}"],
+            bfv: ["\\mathbf{v}"],
+            bfx: ["\\mathbf{x}"],
+            bfw: ["\\mathbf{w}"],
+            bfy: ["\\mathbf{y}"],
+            bfz: ["\\mathbf{z}"],
+            bfA: ["\\mathbf{A}"],
+            bfB: ["\\mathbf{B}"],
+            bfC: ["\\mathbf{C}"],
+            bfD: ["\\mathbf{D}"],
+            bfE: ["\\mathbf{E}"],
+            bfF: ["\\mathbf{F}"],
+            bfG: ["\\mathbf{G}"],
+            bfH: ["\\mathbf{H}"],
+            bfI: ["\\mathbf{I}"],
+            bfJ: ["\\mathbf{J}"],
+            bfK: ["\\mathbf{K}"],
+            bfL: ["\\mathbf{L}"],
+            bfM: ["\\mathbf{M}"],
+            bfN: ["\\mathbf{N}"],
+            bfO: ["\\mathbf{O}"],
+            bfP: ["\\mathbf{P}"],
+            bfQ: ["\\mathbf{Q}"],
+            bfR: ["\\mathbf{R}"],
+            bfS: ["\\mathbf{S}"],
+            bfT: ["\\mathbf{T}"],
+            bfU: ["\\mathbf{U}"],
+            bfV: ["\\mathbf{V}"],
+            bfX: ["\\mathbf{X}"],
+            bfW: ["\\mathbf{W}"],
+            bfY: ["\\mathbf{Y}"],
+            bfZ: ["\\mathbf{Z}"],
+            zero: ["\\{0\\}"],
+            id: ["\\operatorname\{id\}"],
+            sen: ["\\operatorname\{sen\}"],
+            tg: ["\\operatorname\{tg\}"],
+            ad: ["\\operatorname\{ad\}"],
+            mdc: ["\\operatorname\{mdc\}"],
+            im: ["\\operatorname\{im\}"],
+            Quat: ["\\operatorname\{Quat\}"],
+            Aut: ["\\operatorname\{Aut\}"],
+            Inn: ["\\operatorname\{Inn\}"],
+            orb: ["\\operatorname\{orb\}"],
+            stab: ["\\operatorname\{stab\}"],
+            Rep: ["\\operatorname\{Rep\}"],
+            Hom: ["\\operatorname\{Hom\}"],
+            End: ["\\operatorname\{End\}"],
+            Obj: ["\\operatorname\{Obj\}"],
+            tr: ["\\operatorname\{tr\}"],
+            diam: ["\\operatorname\{diam\}"],
+            diag: ["\\operatorname\{diag\}"],
+            Ind: ["\\operatorname\{Ind\}"],
+            Res: ["\\operatorname\{Res\}"],
+            Set: ["\\operatorname\{Set\}"],
+            coker: ["\\operatorname\{coker\}"],
+            supp: ["\\operatorname\{supp\}"],
+            Tor: ["\\operatorname\{Tor\}"],
+            vspan: ["\\operatorname\{vspan\}"],
+            mmc: ["\\operatorname\{mmc\}"],
+            pint: ["{ \\langle #1,#2 \\rangle }",2],
+            rfrac: ["{ {}^{#1}\\!/_{#2} }",2],
+            norma: ["{ \\Vert #1 \\Vert }",2],
+          },
+        },
+      });
+    </script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../itemParenteses.css" />
+    <link rel="stylesheet" type="text/css" href="../ambTeor.css" />
+    
+    <style>
+      body{
+        font-size: 14pt;
+        font-family: "Helvetica", sans-serif;
+        line-height: 1.5;
+        background-color: rgb(233,227,206);
+        counter-reset: contTeor contProp contLema contObs contDef contItemANI contItemNNI contItemRNI;
+      }
+      
+      h1{
+        background-color: rgb(0,128,0);
+        color: rgb(255,250,250);
+      }
+      
+      .exerc[text]:before {
+        font-weight: bold;
+        content: "Exercício " attr(text)". ";
+      }
+      
+      .sol:before {
+        font-weight: bold;
+        content: "Solução. ";
+      }
+      
+      .cqd:after {
+        content: "\25FC";
+        float:right;
+      }
+      
+      .itemAlfaNoIdent:before {
+        counter-increment: contItemANI;
+        content:"(" counter(contItemANI, lower-alpha)") ";
+      }
+      
+      .itemRomanoNoIdent:before {
+        counter-increment: contItemRNI;
+        content:"(" counter(contItemRNI, lower-roman)") ";
+      }
+      
+      .itemNumericoNoIdent:before {
+        counter-increment: contItemNNI;
+        content:"(" counter(contItemNNI)") ";
+      }
+      
+    </style>
+  </head>
+  
+  <body>
+  
+    <div style="text-align:center"><h1>Lista 8</h1></div>
+    
+    <p class="exerc" text="6">
+      (Proposta para a Olimpíada Internacional de Matemática, 2002) Determine o menor número \(n\) tal que o número \(2002^{2002}\) pode ser escrito como uma soma de \(n\) cubos.
+    </p>
+    
+    <p class="sol">
+      A solução apresentada a seguir foi tirada do canal do Michael Penn no Youtube. Veja-a clicando <a href="https://youtu.be/Rjo9ChzrAOM">aqui</a>.
+    </p>
+    
+    <p>
+      Queremos determinar o menor \(n\) tal que \(x_1^3 + \cdots + x_n^3 = 2002^{2002}\). Observe que sempre é possível encontrar uma soma de cubos dando o número em questão - basta somar \(1\) com ele mesmo \(2002^{2002}\) vezes, já que \(1^3 = 1\). Daí o interesse em se determinar o menor \(n\) que satisfaz essa condição. Para resolver essa questão, vamos analisar como se comporta cubos quando vistos módulo \(9\).
+      \[
+        \begin{array}{c|c|c|c|c|c|c|c|c|c}
+          m \pmod{9} & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ \hline
+          m^3 \pmod{9} & 0 & 1 & -1 & 0 & 1 & -1 & 0 & 1 & -1
+        \end{array}
+      \]
+      A tabela acima nos diz que \(m^3 \equiv -1, 0, 1 \pmod{9}\), para todo \(m\) inteiro. Note que \(2002 \equiv 4 \pmod{9}\). Uma vez que \(3 \not\mid 2002\), então \(\mdc(2002,9) = 1\). Logo, pelo <a href="https://schcs.github.io/WP/index.php/ensino/fundamentos-de-algebra/o-pequeno-teorema-de-fermat-e-o-teorema-de-euler/" target="_blank">Teorema de Euler</a>, sabendo que \(\varphi(9) = 6\), temos que \(2002^6 \equiv 1 \pmod{9}\). Como \(2002 \equiv 4 \pmod{6}\), então \(2002 = 6k + 4\), para algum \(k\) inteiro. Disso segue que \(2002^{2002} = 2002^{6k + 4} = \) \(2002^{6k}2002^{4} \equiv \) \(2002^4 \pmod{9} \equiv \) \(4^4 \pmod{9} \equiv \) \(4^24^2 \pmod{9} \equiv \) \((-2)(-2) \pmod{9} \equiv \) \(4 \pmod{9}\). Portanto, a soma de \(n\) cubos resultando em \(2002^{2002}\), quando visto módulo \(9\) tem que resultar em \(4\). Uma vez que \(m^3 \equiv -1, 0, 1 \pmod{9}\), para todo \(m\) inteiro, temos que a menor quantidade de cubos tal que \(x_1^3 + \cdots + x_n^3 \equiv 4 \pmod{9}\) é \(n = 4\), que é quando escolhemos quatro números cujo cubo é congruente a \(1\) módulo \(9\). Com isso, mostramos que se \(x_1^3 + \cdots + x_n^3 = 2002^{2002}\), então \(x_1^3 + \cdots + x_n^3 \equiv 4 \pmod{9}\), o que implica que \(n \ge 4\). Equivalentemente, mostramos que se \(n < 4\), então não é possível encontrar uma soma de \(n\) cubos cujo resultado é \(2002^{2002}\). A pergunta que surge é a seguinte: é possível decompor \(2002^{2002}\) como soma de \(4\) cubos. A resposta é sim. Para ver isso, note que \(2002 = 3\cdot 667 + 1\). Assim, 
+      \[
+        \begin{split}
+          2002^{2002} &= (2002^{667})^3\cdot\overbrace{2002}^{10^3 + 10^3 + 1^3 + 1^3} \\
+          &= (10\cdot 2002^{667})^3 + (10\cdot 2002^{667})^3 + (2002^{667})^3 + (2002^{667})^3
+        \end{split}
+      \]
+      Portanto, o menor número \(n\) tal que o número \(2002^{2002}\) pode ser escrito como uma soma de \(n\) cubos é \(4\).
+    <span class="cqd"></span></p>
+
+  </body>
+  
+</html>
+
