@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Lista 9 - Exercício 6 </title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+    });
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": { fonts: ["TeX"] },
+        TeX: {
+          equationNumbers: { autoNumber: "AMS" },
+          Macros: {
+            fraka: ["\\mathfrak{a}"],
+            frakb: ["\\mathfrak{b}"],
+            frakc: ["\\mathfrak{c}"],
+            frakd: ["\\mathfrak{d}"],
+            frake: ["\\mathfrak{e}"],
+            frakf: ["\\mathfrak{f}"],
+            frakg: ["\\mathfrak{g}"],
+            frakh: ["\\mathfrak{h}"],
+            fraki: ["\\mathfrak{i}"],
+            frakj: ["\\mathfrak{j}"],
+            frakk: ["\\mathfrak{k}"],
+            frakl: ["\\mathfrak{l}"],
+            frakm: ["\\mathfrak{m}"],
+            frakn: ["\\mathfrak{n}"],
+            frako: ["\\mathfrak{o}"],
+            frakp: ["\\mathfrak{p}"],
+            frakq: ["\\mathfrak{q}"],
+            frakr: ["\\mathfrak{r}"],
+            fraks: ["\\mathfrak{s}"],
+            frakt: ["\\mathfrak{t}"],
+            fraku: ["\\mathfrak{u}"],
+            frakv: ["\\mathfrak{v}"],
+            frakx: ["\\mathfrak{x}"],
+            frakw: ["\\mathfrak{w}"],
+            fraky: ["\\mathfrak{y}"],
+            frakz: ["\\mathfrak{z}"],
+            frakA: ["\\mathfrak{A}"],
+            frakB: ["\\mathfrak{B}"],
+            frakC: ["\\mathfrak{C}"],
+            frakD: ["\\mathfrak{D}"],
+            frakE: ["\\mathfrak{E}"],
+            frakF: ["\\mathfrak{F}"],
+            frakG: ["\\mathfrak{G}"],
+            frakH: ["\\mathfrak{H}"],
+            frakI: ["\\mathfrak{I}"],
+            frakJ: ["\\mathfrak{J}"],
+            frakK: ["\\mathfrak{K}"],
+            frakL: ["\\mathfrak{L}"],
+            frakM: ["\\mathfrak{M}"],
+            frakN: ["\\mathfrak{N}"],
+            frakO: ["\\mathfrak{O}"],
+            frakP: ["\\mathfrak{P}"],
+            frakQ: ["\\mathfrak{Q}"],
+            frakR: ["\\mathfrak{R}"],
+            frakS: ["\\mathfrak{S}"],
+            frakT: ["\\mathfrak{T}"],
+            frakU: ["\\mathfrak{U}"],
+            frakV: ["\\mathfrak{V}"],
+            frakX: ["\\mathfrak{X}"],
+            frakW: ["\\mathfrak{W}"],
+            frakY: ["\\mathfrak{Y}"],
+            frakZ: ["\\mathfrak{Z}"],
+            frakgl: ["\\mathfrak{gl}"],
+            fraksl: ["\\mathfrak{sl}"],
+            bba: ["\\mathbb{a}"],
+            bbb: ["\\mathbb{b}"],
+            bbc: ["\\mathbb{c}"],
+            bbd: ["\\mathbb{d}"],
+            bbe: ["\\mathbb{e}"],
+            bbf: ["\\mathbb{f}"],
+            bbg: ["\\mathbb{g}"],
+            bbh: ["\\mathbb{h}"],
+            bbi: ["\\mathbb{i}"],
+            bbj: ["\\mathbb{j}"],
+            bbk: ["\\mathbb{k}"],
+            bbl: ["\\mathbb{l}"],
+            bbm: ["\\mathbb{m}"],
+            bbn: ["\\mathbb{n}"],
+            bbo: ["\\mathbb{o}"],
+            bbp: ["\\mathbb{p}"],
+            bbq: ["\\mathbb{q}"],
+            bbr: ["\\mathbb{r}"],
+            bbs: ["\\mathbb{s}"],
+            bbt: ["\\mathbb{t}"],
+            bbu: ["\\mathbb{u}"],
+            bbv: ["\\mathbb{v}"],
+            bbx: ["\\mathbb{x}"],
+            bbw: ["\\mathbb{w}"],
+            bby: ["\\mathbb{y}"],
+            bbz: ["\\mathbb{z}"],
+            bbA: ["\\mathbb{A}"],
+            bbB: ["\\mathbb{B}"],
+            bbC: ["\\mathbb{C}"],
+            bbD: ["\\mathbb{D}"],
+            bbE: ["\\mathbb{E}"],
+            bbF: ["\\mathbb{F}"],
+            bbG: ["\\mathbb{G}"],
+            bbH: ["\\mathbb{H}"],
+            bbI: ["\\mathbb{I}"],
+            bbJ: ["\\mathbb{J}"],
+            bbK: ["\\mathbb{K}"],
+            bbL: ["\\mathbb{L}"],
+            bbM: ["\\mathbb{M}"],
+            bbN: ["\\mathbb{N}"],
+            bbO: ["\\mathbb{O}"],
+            bbP: ["\\mathbb{P}"],
+            bbQ: ["\\mathbb{Q}"],
+            bbR: ["\\mathbb{R}"],
+            bbS: ["\\mathbb{S}"],
+            bbT: ["\\mathbb{T}"],
+            bbU: ["\\mathbb{U}"],
+            bbV: ["\\mathbb{V}"],
+            bbX: ["\\mathbb{X}"],
+            bbW: ["\\mathbb{W}"],
+            bbY: ["\\mathbb{Y}"],
+            bbZ: ["\\mathbb{Z}"],
+            cala: ["\\mathcal{a}"],
+            calb: ["\\mathcal{b}"],
+            calc: ["\\mathcal{c}"],
+            cald: ["\\mathcal{d}"],
+            cale: ["\\mathcal{e}"],
+            calf: ["\\mathcal{f}"],
+            calg: ["\\mathcal{g}"],
+            calh: ["\\mathcal{h}"],
+            cali: ["\\mathcal{i}"],
+            calj: ["\\mathcal{j}"],
+            calk: ["\\mathcal{k}"],
+            call: ["\\mathcal{l}"],
+            calm: ["\\mathcal{m}"],
+            caln: ["\\mathcal{n}"],
+            calo: ["\\mathcal{o}"],
+            calp: ["\\mathcal{p}"],
+            calq: ["\\mathcal{q}"],
+            calr: ["\\mathcal{r}"],
+            cals: ["\\mathcal{s}"],
+            calt: ["\\mathcal{t}"],
+            calu: ["\\mathcal{u}"],
+            calv: ["\\mathcal{v}"],
+            calx: ["\\mathcal{x}"],
+            calw: ["\\mathcal{w}"],
+            caly: ["\\mathcal{y}"],
+            calz: ["\\mathcal{z}"],
+            calA: ["\\mathcal{A}"],
+            calB: ["\\mathcal{B}"],
+            calC: ["\\mathcal{C}"],
+            calD: ["\\mathcal{D}"],
+            calE: ["\\mathcal{E}"],
+            calF: ["\\mathcal{F}"],
+            calG: ["\\mathcal{G}"],
+            calH: ["\\mathcal{H}"],
+            calI: ["\\mathcal{I}"],
+            calJ: ["\\mathcal{J}"],
+            calK: ["\\mathcal{K}"],
+            calL: ["\\mathcal{L}"],
+            calM: ["\\mathcal{M}"],
+            calN: ["\\mathcal{N}"],
+            calO: ["\\mathcal{O}"],
+            calP: ["\\mathcal{P}"],
+            calQ: ["\\mathcal{Q}"],
+            calR: ["\\mathcal{R}"],
+            calS: ["\\mathcal{S}"],
+            calT: ["\\mathcal{T}"],
+            calU: ["\\mathcal{U}"],
+            calV: ["\\mathcal{V}"],
+            calX: ["\\mathcal{X}"],
+            calW: ["\\mathcal{W}"],
+            calY: ["\\mathcal{Y}"],
+            calZ: ["\\mathcal{Z}"],
+            bfa: ["\\mathbf{a}"],
+            bfb: ["\\mathbf{b}"],
+            bfc: ["\\mathbf{c}"],
+            bfd: ["\\mathbf{d}"],
+            bfe: ["\\mathbf{e}"],
+            bff: ["\\mathbf{f}"],
+            bfg: ["\\mathbf{g}"],
+            bfh: ["\\mathbf{h}"],
+            bfi: ["\\mathbf{i}"],
+            bfj: ["\\mathbf{j}"],
+            bfk: ["\\mathbf{k}"],
+            bfl: ["\\mathbf{l}"],
+            bfm: ["\\mathbf{m}"],
+            bfn: ["\\mathbf{n}"],
+            bfo: ["\\mathbf{o}"],
+            bfp: ["\\mathbf{p}"],
+            bfq: ["\\mathbf{q}"],
+            bfr: ["\\mathbf{r}"],
+            bfs: ["\\mathbf{s}"],
+            bft: ["\\mathbf{t}"],
+            bfu: ["\\mathbf{u}"],
+            bfv: ["\\mathbf{v}"],
+            bfx: ["\\mathbf{x}"],
+            bfw: ["\\mathbf{w}"],
+            bfy: ["\\mathbf{y}"],
+            bfz: ["\\mathbf{z}"],
+            bfA: ["\\mathbf{A}"],
+            bfB: ["\\mathbf{B}"],
+            bfC: ["\\mathbf{C}"],
+            bfD: ["\\mathbf{D}"],
+            bfE: ["\\mathbf{E}"],
+            bfF: ["\\mathbf{F}"],
+            bfG: ["\\mathbf{G}"],
+            bfH: ["\\mathbf{H}"],
+            bfI: ["\\mathbf{I}"],
+            bfJ: ["\\mathbf{J}"],
+            bfK: ["\\mathbf{K}"],
+            bfL: ["\\mathbf{L}"],
+            bfM: ["\\mathbf{M}"],
+            bfN: ["\\mathbf{N}"],
+            bfO: ["\\mathbf{O}"],
+            bfP: ["\\mathbf{P}"],
+            bfQ: ["\\mathbf{Q}"],
+            bfR: ["\\mathbf{R}"],
+            bfS: ["\\mathbf{S}"],
+            bfT: ["\\mathbf{T}"],
+            bfU: ["\\mathbf{U}"],
+            bfV: ["\\mathbf{V}"],
+            bfX: ["\\mathbf{X}"],
+            bfW: ["\\mathbf{W}"],
+            bfY: ["\\mathbf{Y}"],
+            bfZ: ["\\mathbf{Z}"],
+            zero: ["\\{0\\}"],
+            id: ["\\operatorname\{id\}"],
+            sen: ["\\operatorname\{sen\}"],
+            tg: ["\\operatorname\{tg\}"],
+            ad: ["\\operatorname\{ad\}"],
+            mdc: ["\\operatorname\{mdc\}"],
+            im: ["\\operatorname\{im\}"],
+            Quat: ["\\operatorname\{Quat\}"],
+            Aut: ["\\operatorname\{Aut\}"],
+            Inn: ["\\operatorname\{Inn\}"],
+            orb: ["\\operatorname\{orb\}"],
+            stab: ["\\operatorname\{stab\}"],
+            Rep: ["\\operatorname\{Rep\}"],
+            Hom: ["\\operatorname\{Hom\}"],
+            End: ["\\operatorname\{End\}"],
+            Obj: ["\\operatorname\{Obj\}"],
+            tr: ["\\operatorname\{tr\}"],
+            diam: ["\\operatorname\{diam\}"],
+            diag: ["\\operatorname\{diag\}"],
+            Ind: ["\\operatorname\{Ind\}"],
+            Res: ["\\operatorname\{Res\}"],
+            Set: ["\\operatorname\{Set\}"],
+            coker: ["\\operatorname\{coker\}"],
+            supp: ["\\operatorname\{supp\}"],
+            Tor: ["\\operatorname\{Tor\}"],
+            vspan: ["\\operatorname\{vspan\}"],
+            mmc: ["\\operatorname\{mmc\}"],
+            pint: ["{ \\langle #1,#2 \\rangle }",2],
+            rfrac: ["{ {}^{#1}\\!/_{#2} }",2],
+            norma: ["{ \\Vert #1 \\Vert }",2],
+          },
+        },
+      });
+    </script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../itemParenteses.css" />
+    <link rel="stylesheet" type="text/css" href="../ambTeor.css" />
+    
+    <style>
+      body{
+        font-size: 14pt;
+        font-family: "Helvetica", sans-serif;
+        line-height: 1.5;
+        background-color: rgb(233,227,206);
+        counter-reset: contTeor contProp contLema contObs contDef contItemANI contItemNNI contItemRNI;
+      }
+      
+      h1{
+        background-color: rgb(0,128,0);
+        color: rgb(255,250,250);
+      }
+      
+      .exerc[text]:before {
+        font-weight: bold;
+        content: "Exercício " attr(text)". ";
+      }
+      
+      .sol:before {
+        font-weight: bold;
+        content: "Solução. ";
+      }
+      
+      .cqd:after {
+        content: "\25FC";
+        float:right;
+      }
+      
+      .itemAlfaNoIdent:before {
+        counter-increment: contItemANI;
+        content:"(" counter(contItemANI, lower-alpha)") ";
+      }
+      
+      .itemRomanoNoIdent:before {
+        counter-increment: contItemRNI;
+        content:"(" counter(contItemRNI, lower-roman)") ";
+      }
+      
+      .itemNumericoNoIdent:before {
+        counter-increment: contItemNNI;
+        content:"(" counter(contItemNNI)") ";
+      }
+      
+    </style>
+  </head>
+  
+  <body>
+  
+    <div style="text-align:center"><h1>Lista 9</h1></div>
+    
+    <p class="exerc" text="6">
+      Seja \(p\) um primo ímpar.
+      <ol class="alfa">
+        <li>Mostre que \(\binom{p-1}{a} \equiv (-1)^a\), para todo \(a \in \{0, \dots, p-1\}\).</li>
+        <li>Mostre que \((1 + i)^{p-1} = (2i)^{\frac{p-1}{2}}\) (onde \(i \in \bbC\) é a unidade imaginária).</li>
+        <li>Deduza dos itens anteriores que
+          \[
+            (2i)^{\frac{p-1}{2}} = (-1)^{\frac{p^2-1}{8}}i^{\frac{p-1}{2}} + (k_1 + k_2i)p,
+          \]
+          onde \(k_1, k_2 \in \bbZ\).
+        </li>
+        <li>Deduza que \(2^{\frac{p-1}{2}} \equiv (-1)^{\frac{p^2-1}{8}} \pmod{p}\), ou seja,
+          \[
+            \left(\frac{2}{p}\right) = 
+            \begin{cases}
+              1 & \text{se } p \equiv \pm 1 \pmod{8} \\
+              -1 & \text{se } p \equiv \pm 3 \pmod{8}.
+            \end{cases}
+          \]
+        </li>
+      </ol>
+    </p>
+    
+    <p class="sol"></p>
+    
+    <p>
+      (a) Seja \(a \in \{0, \dots, p-1\}\). Então
+      \[
+        \begin{split}
+          \binom{p-1}{a} &= \frac{(p-1)!}{a!(p-1-a)!} \\
+          &= \frac{(p-1)(p-2)\dots (p - \cancel{1} - a + \cancel{1})(\bcancel{p-1-a)!}}{a!\bcancel{(p-1-a)!}} \\
+          &= \frac{(p-1)(p-2)\dots (p - a)}{a!}.
+        \end{split}
+      \]
+      Observe que 
+      \[
+        \begin{array}{c}
+          p-1 \equiv -1 \pmod{p} \\
+          p-2 \equiv -2 \pmod{p} \\
+          \vdots \\
+          p-a \equiv -a \pmod{p}
+        \end{array}
+      \]
+      Logo, 
+      \[
+        (p-1)(p-2)\dots (p - a) \equiv (-1)(-2)\cdots(-a) \pmod{p} \equiv (-1)^{a}a!\pmod{p},
+      \]
+      de onde concluímos que
+      \[
+        \begin{split}
+          \binom{p-1}{a} &= \frac{(p-1)(p-2)\dots (p - a)}{a!} \\
+          &\equiv \frac{(-1)^{a}a!}{a!} \pmod{p} \\
+          &\equiv (-1)^{a} \pmod{p}.
+        \end{split}
+      \]
+    </p>
+    
+    <p>
+      (b) Veja que
+      \[
+        (1 + i)^{2(p-1)} = (1 + 2i + i^2)^{p-1} = (2i)^{p-1}.
+      \]
+      Portanto, \((1 + i)^{p-1} = (2i)^{\frac{p-1}{2}}\).
+    </p>
+    
+    <p>
+      (c) Pelo item (a), dado \(j \in \{0, \dots, p-1\}\), temos que existe \(k \in \bbZ\) tal que \(\binom{p-1}{j} = (-1)^j + kp\). Assim,
+      \[
+        \begin{split}
+          (2i)^{\frac{p-1}{2}} = (1 + i)^{p-1} &= \sum_{j=0}^{p-1}\binom{p-1}{j}i^j \\
+          &= \sum_{j=0}^{p-1}(-1)^ji^j + \sum_{j=0}^{p-1}kpi^j
+        \end{split}
+      \]
+      Observe que \(\sum_{j=0}^{p-1}kpi^j = p\sum_{j=0}^{p-1}ki^j\) é algum múltiplo complexo do inteiro \(p\). Logo, existem \(k_1, k_2 \in \bbZ\) tais que \(p\sum_{j=0}^{p-1}ki^j = p(k_1 + k_2i)\). Agora, note que
+      \[
+        \sum_{j=0}^{p-1}(-1)^ji^j = \underbrace{1 - i - 1 + i}_{0} + \underbrace{1 - i - 1 + i}_{0} + \cdots
+      \]
+      Mais precisamente, temos que
+      \[
+        \sum_{j=0}^{p-1}(-1)^ji^j =
+        \begin{cases}
+          1, & \text{se } \; p - 1 \equiv 0 \pmod{4} \\
+          1 - i, & \text{se } \; p - 1 \equiv 1 \pmod{4} \\
+          -i, & \text{se } \; p - 1 \equiv 2 \pmod{4} \\
+          0, & \text{se } \; p - 1 \equiv 3 \pmod{4}
+        \end{cases}
+      \]
+      Uma vez que \(p\) é ímpar, então \(p \equiv 1 \pmod{4}\) ou \(p \equiv 3 \pmod{4}\). Isso nos dá que \(p - 1 \equiv 0 \pmod{4}\) ou \(p - 1 \equiv 2 \pmod{4}\). Portanto,
+      \[
+        (2i)^{\frac{p-1}{2}} =
+        \begin{cases}
+          1 + p(k_1 + k_2i), & \text{se } \; p - 1 \equiv 0 \pmod{4} \\
+          -i + p(k_1 + k_2i), & \text{se } \; p - 1 \equiv 2 \pmod{4} 
+        \end{cases}
+      \]
+      Dessa forma, para deduzirmos a fórmula do enunciado da questão, devemos provar que
+      \[
+        (-1)^{\frac{p^2-1}{8}}i^{\frac{p-1}{2}} =
+        \begin{cases}
+          1, & \text{se } \; p - 1 \equiv 0 \pmod{4} \\
+          -i, & \text{se } \; p - 1 \equiv 2 \pmod{4} 
+        \end{cases}
+      \]
+      <ul>
+        <li>Suponha que \(p - 1 \equiv 0 \pmod{4}\). Então existe \(k \in \bbZ\) tal que \(p = 1 + 4k\). Assim, \(p^2 = 1 + 8k + 16k^2\) e, consequentemente, \(p^2 - 1 = 8k(1 + 2k)\). Logo, \(\frac{p^2 - 1}{8} = k(1 + 2k)\). Como \(p = 1 + 4k\), então \(\frac{p-1}{2} = 2k\). Vamos analisar a paridade de \(k\) e concluir que sendo ele par ou ímpar, sempre obtemos \((-1)^{\frac{p^2-1}{8}}i^{\frac{p-1}{2}} = 1\).
+          <ul>
+            <li>Suponha que \(k\) é par, com \(k = 2\ell\), para algum \(\ell \in \bbZ\). Então \(\frac{p^2 - 1}{8} = k(1 + 2k)\) é par, o que implica que \((-1)^{\frac{p^2-1}{8}} = 1\). Nesse caso, também temos que \(\frac{p-1}{2} = 2k = 4\ell\). Logo, \(i^{\frac{p-1}{2}} = \) \(i^{4\ell} = \) \((i^4)^{\ell} = \) \(1\). Portanto, \((-1)^{\frac{p^2-1}{8}}i^{\frac{p-1}{2}} = 1\).</li>
+            <li>Suponha que \(k\) é ímpar, com \(k = 2\ell + 1\), para algum \(\ell \in \bbZ\). Então \(\frac{p^2 - 1}{8}\) também é ímpar, o que implica que \((-1)^{\frac{p^2-1}{8}} = -1\). Observe que, para esse caso, \(\frac{p-1}{2} = 2k = 4\ell + 2\). Logo, \(i^{\frac{p-1}{2}} = \) \(i^{4\ell + 2} = \) \(-1\). Portanto,  \((-1)^{\frac{p^2-1}{8}}i^{\frac{p-1}{2}} = 1\).</li>
+          </ul>
+        </li>
+        <li>Suponha que \(p - 1 \equiv 2 \pmod{4}\). Então existe \(k \in \bbZ\) tal que \(p = 3 + 4k\). Assim como feito para o caso anterior, obtemos \(\frac{p^2 - 1}{8} = 1 + 3k + 2k^2\) e \(\frac{p-1}{2} = 2k + 1\). Logo, 
+          \[
+            \begin{split}
+              (-1)^{\frac{p^2-1}{8}}i^{\frac{p-1}{2}} &= (-1)^{1 + 3k + 2k^2}i^{2k + 1} \\
+              &= (-1)^{1 + 3k}(-1)^ki \\
+              &= (-1)^{1 + 4k}i \\
+              &= -i
+            \end{split}
+          \]
+        </li>
+      </ul>
+      Portanto, \((2i)^{\frac{p-1}{2}} = (-1)^{\frac{p^2-1}{8}}i^{\frac{p-1}{2}} + (k_1 + k_2i)p\), como queríamos provar.
+    </p>
+    
+    <p>
+      (d) Dividindo a equação obtida no item anterior por \(i^{\frac{p-1}{2}}\), chegamos na equação \(2^{\frac{p-1}{2}} = (-1)^{\frac{p^2-1}{8}} + (k'_1 + k'_2i)p\), onde \(k'_1 + k'_2i = (k_1 + k_2i)\div i^{\frac{p-1}{2}}\). Uma vez que \(k_1, k_2 \in \bbZ\) e \(i^{\frac{p-1}{2}} \in \{1, i, -i, -1\}\), então \(k'_1, k'_2 \in \bbZ\). Observe que tanto \(2^{\frac{p-1}{2}}\), quanto \((-1)^{\frac{p^2-1}{8}}\) são inteiros. Logo, \((k'_1 + k'_2i)p \in \bbZ\). Assim, \(k'_2 = 0\). Dessa forma, obtemos a igualdade
+      \[
+        2^{\frac{p-1}{2}} = (-1)^{\frac{p^2-1}{8}} + k'_1p,
+      \]
+      que ocorre no conjunto dos números inteiros. Portanto, \(2^{\frac{p-1}{2}} \equiv (-1)^{\frac{p^2-1}{8}} \pmod{p}\). De posse dessa congruência, vamos, agora, analisar o símbolo de Legendre \(\left(\frac{2}{p}\right)\). Lembre-se de que \(\left(\frac{2}{p}\right) \equiv 2^{\frac{p-1}{2}} \pmod{p}\). Logo, \(\left(\frac{2}{p}\right) \equiv (-1)^{\frac{p^2-1}{8}} \pmod{p}\). Uma vez que \(p\) é um primo ímpar, então temos \(4\) possibilidades para ele: \(p \equiv \pm 1, \pm 3 \pmod{8}\).
+      <ul>
+        <li>Suponha \(p \equiv 1 \pmod{8}\). Então existe \(k \in \bbZ\) tal que \(p - 1 = 8k\). Assim, \(\frac{p^2 - 1}{8} = \) \(\frac{(p-1)(p+1)}{8} = \) \(\frac{8k(p+1)}{8} = \) \(k(p+1)\). Como \(p\) é ímpar, então \(p + 1\) é par. Logo, \(\frac{p^2 - 1}{8}\) é par, o que implica que \((-1)^{\frac{p^2-1}{8}} = 1\).</li>
+        <li>Suponha \(p \equiv -1 \pmod{8}\). é análogo ao item anterior. A diferença é que aqui obtemos que \(p + 1\) é um múltiplo de \(8\) e \(p - 1\) é par. Seguindo as mesmas contas do caso anterior, chegamos que \((-1)^{\frac{p^2-1}{8}} = 1\).</li>
+        <li>Suponha \(p \equiv 3 \pmod{8}\). Então existe \(k \in \bbZ\) tal que \(p - 3 = 8k\). Logo, \(p - 1 = 8k + 2\) e \(p + 1 = 8k + 4\). Assim, \(\frac{p^2 - 1}{8} = 8k^2 + 6k + 1\), que é um número ímpar. Portanto, \((-1)^{\frac{p^2-1}{8}} = -1\).</li>
+        <li>Suponha \(p \equiv -3 \pmod{8}\). Usando o mesmo raciocínio do item anterior, chegamos que existe \(k \in \bbZ\) tal que \(\frac{p^2 - 1}{8} = 8k^2 - 6k + 1\). Como esse número é ímpar, temos que \((-1)^{\frac{p^2-1}{8}} = -1\).</li>
+      </ul>
+      Portanto,
+      \[
+        \left(\frac{2}{p}\right) = 
+        \begin{cases}
+          1 & \text{se } p \equiv \pm 1 \pmod{8} \\
+          -1 & \text{se } p \equiv \pm 3 \pmod{8},
+        \end{cases}
+      \]
+      o que finaliza o exercício.
+    <span class="cqd"></span></p>
+
+  </body>
+  
+</html>
+
