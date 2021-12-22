@@ -322,7 +322,7 @@
     <p class="exerc" text="5">
       Seja \(p\) um primo, seja \(c \in \{1, \dots, p - 1\}\) um resíduo quadrático módulo \(p\).
       <ol class="alfa">
-        <li>Seja \(u = c^{\frac{p+1}{4}}\). Mostre que \(u^2 \equiv c \pmod{p}\).</li>
+        <li>Assuma que \(p \equiv 3 \pmod{4}\) e seja \(u = c^{\frac{p+1}{4}}\). Mostre que \(u^2 \equiv c \pmod{p}\).</li>
         <li>Assuma que \(p \equiv 5 \pmod{8}\) e ponha \(u_1 = c^{\frac{p+3}{8}}\) e \(u_2 = 2^{\frac{p-1}{4}}c^{\frac{p+3}{8}}\). Mostre que
           \[
             \begin{array}{lcr}
@@ -336,7 +336,7 @@
     <p class="sol"></p>
     
     <p>
-      (a) Observe que \(u^2 = c^{\frac{p+1}{2}} = \) \(c^{\frac{p-1+2}{2}} = \) \(c^{\frac{p-1}{2}}c\). Como \(c\) é um resíduo quadrático módulo \(p\), então \(c^{\frac{p-1}{2}} \equiv 1 \pmod{p}\). Portanto, \(u^2 \equiv c \pmod{p}\).
+      (a) Como \(p \equiv 3 \pmod{4}\), então existe \(k \in \bbN\) tal que \(p = 4k + 3\). Disso segue que \(\frac{p + 1}{4} = k + 1 \in \bbN\), ou seja, o número \(u = c^{\frac{p+1}{4}}\) tem uma potência natural. Assim, note que \(u^2 = c^{\frac{p+1}{2}} = \) \(c^{\frac{p-1+2}{2}} = \) \(c^{\frac{p-1}{2}}c\). Como \(c\) é um resíduo quadrático módulo \(p\), então \(c^{\frac{p-1}{2}} \equiv 1 \pmod{p}\). Portanto, \(u^2 \equiv c \pmod{p}\).
     </p>
     
     <p>
@@ -351,4 +351,3 @@
   </body>
   
 </html>
-
