@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Lista 10 - Exercício 1 </title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+    });
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": { fonts: ["TeX"] },
+        TeX: {
+          equationNumbers: { autoNumber: "AMS" },
+          Macros: {
+            fraka: ["\\mathfrak{a}"],
+            frakb: ["\\mathfrak{b}"],
+            frakc: ["\\mathfrak{c}"],
+            frakd: ["\\mathfrak{d}"],
+            frake: ["\\mathfrak{e}"],
+            frakf: ["\\mathfrak{f}"],
+            frakg: ["\\mathfrak{g}"],
+            frakh: ["\\mathfrak{h}"],
+            fraki: ["\\mathfrak{i}"],
+            frakj: ["\\mathfrak{j}"],
+            frakk: ["\\mathfrak{k}"],
+            frakl: ["\\mathfrak{l}"],
+            frakm: ["\\mathfrak{m}"],
+            frakn: ["\\mathfrak{n}"],
+            frako: ["\\mathfrak{o}"],
+            frakp: ["\\mathfrak{p}"],
+            frakq: ["\\mathfrak{q}"],
+            frakr: ["\\mathfrak{r}"],
+            fraks: ["\\mathfrak{s}"],
+            frakt: ["\\mathfrak{t}"],
+            fraku: ["\\mathfrak{u}"],
+            frakv: ["\\mathfrak{v}"],
+            frakx: ["\\mathfrak{x}"],
+            frakw: ["\\mathfrak{w}"],
+            fraky: ["\\mathfrak{y}"],
+            frakz: ["\\mathfrak{z}"],
+            frakA: ["\\mathfrak{A}"],
+            frakB: ["\\mathfrak{B}"],
+            frakC: ["\\mathfrak{C}"],
+            frakD: ["\\mathfrak{D}"],
+            frakE: ["\\mathfrak{E}"],
+            frakF: ["\\mathfrak{F}"],
+            frakG: ["\\mathfrak{G}"],
+            frakH: ["\\mathfrak{H}"],
+            frakI: ["\\mathfrak{I}"],
+            frakJ: ["\\mathfrak{J}"],
+            frakK: ["\\mathfrak{K}"],
+            frakL: ["\\mathfrak{L}"],
+            frakM: ["\\mathfrak{M}"],
+            frakN: ["\\mathfrak{N}"],
+            frakO: ["\\mathfrak{O}"],
+            frakP: ["\\mathfrak{P}"],
+            frakQ: ["\\mathfrak{Q}"],
+            frakR: ["\\mathfrak{R}"],
+            frakS: ["\\mathfrak{S}"],
+            frakT: ["\\mathfrak{T}"],
+            frakU: ["\\mathfrak{U}"],
+            frakV: ["\\mathfrak{V}"],
+            frakX: ["\\mathfrak{X}"],
+            frakW: ["\\mathfrak{W}"],
+            frakY: ["\\mathfrak{Y}"],
+            frakZ: ["\\mathfrak{Z}"],
+            frakgl: ["\\mathfrak{gl}"],
+            fraksl: ["\\mathfrak{sl}"],
+            bba: ["\\mathbb{a}"],
+            bbb: ["\\mathbb{b}"],
+            bbc: ["\\mathbb{c}"],
+            bbd: ["\\mathbb{d}"],
+            bbe: ["\\mathbb{e}"],
+            bbf: ["\\mathbb{f}"],
+            bbg: ["\\mathbb{g}"],
+            bbh: ["\\mathbb{h}"],
+            bbi: ["\\mathbb{i}"],
+            bbj: ["\\mathbb{j}"],
+            bbk: ["\\mathbb{k}"],
+            bbl: ["\\mathbb{l}"],
+            bbm: ["\\mathbb{m}"],
+            bbn: ["\\mathbb{n}"],
+            bbo: ["\\mathbb{o}"],
+            bbp: ["\\mathbb{p}"],
+            bbq: ["\\mathbb{q}"],
+            bbr: ["\\mathbb{r}"],
+            bbs: ["\\mathbb{s}"],
+            bbt: ["\\mathbb{t}"],
+            bbu: ["\\mathbb{u}"],
+            bbv: ["\\mathbb{v}"],
+            bbx: ["\\mathbb{x}"],
+            bbw: ["\\mathbb{w}"],
+            bby: ["\\mathbb{y}"],
+            bbz: ["\\mathbb{z}"],
+            bbA: ["\\mathbb{A}"],
+            bbB: ["\\mathbb{B}"],
+            bbC: ["\\mathbb{C}"],
+            bbD: ["\\mathbb{D}"],
+            bbE: ["\\mathbb{E}"],
+            bbF: ["\\mathbb{F}"],
+            bbG: ["\\mathbb{G}"],
+            bbH: ["\\mathbb{H}"],
+            bbI: ["\\mathbb{I}"],
+            bbJ: ["\\mathbb{J}"],
+            bbK: ["\\mathbb{K}"],
+            bbL: ["\\mathbb{L}"],
+            bbM: ["\\mathbb{M}"],
+            bbN: ["\\mathbb{N}"],
+            bbO: ["\\mathbb{O}"],
+            bbP: ["\\mathbb{P}"],
+            bbQ: ["\\mathbb{Q}"],
+            bbR: ["\\mathbb{R}"],
+            bbS: ["\\mathbb{S}"],
+            bbT: ["\\mathbb{T}"],
+            bbU: ["\\mathbb{U}"],
+            bbV: ["\\mathbb{V}"],
+            bbX: ["\\mathbb{X}"],
+            bbW: ["\\mathbb{W}"],
+            bbY: ["\\mathbb{Y}"],
+            bbZ: ["\\mathbb{Z}"],
+            cala: ["\\mathcal{a}"],
+            calb: ["\\mathcal{b}"],
+            calc: ["\\mathcal{c}"],
+            cald: ["\\mathcal{d}"],
+            cale: ["\\mathcal{e}"],
+            calf: ["\\mathcal{f}"],
+            calg: ["\\mathcal{g}"],
+            calh: ["\\mathcal{h}"],
+            cali: ["\\mathcal{i}"],
+            calj: ["\\mathcal{j}"],
+            calk: ["\\mathcal{k}"],
+            call: ["\\mathcal{l}"],
+            calm: ["\\mathcal{m}"],
+            caln: ["\\mathcal{n}"],
+            calo: ["\\mathcal{o}"],
+            calp: ["\\mathcal{p}"],
+            calq: ["\\mathcal{q}"],
+            calr: ["\\mathcal{r}"],
+            cals: ["\\mathcal{s}"],
+            calt: ["\\mathcal{t}"],
+            calu: ["\\mathcal{u}"],
+            calv: ["\\mathcal{v}"],
+            calx: ["\\mathcal{x}"],
+            calw: ["\\mathcal{w}"],
+            caly: ["\\mathcal{y}"],
+            calz: ["\\mathcal{z}"],
+            calA: ["\\mathcal{A}"],
+            calB: ["\\mathcal{B}"],
+            calC: ["\\mathcal{C}"],
+            calD: ["\\mathcal{D}"],
+            calE: ["\\mathcal{E}"],
+            calF: ["\\mathcal{F}"],
+            calG: ["\\mathcal{G}"],
+            calH: ["\\mathcal{H}"],
+            calI: ["\\mathcal{I}"],
+            calJ: ["\\mathcal{J}"],
+            calK: ["\\mathcal{K}"],
+            calL: ["\\mathcal{L}"],
+            calM: ["\\mathcal{M}"],
+            calN: ["\\mathcal{N}"],
+            calO: ["\\mathcal{O}"],
+            calP: ["\\mathcal{P}"],
+            calQ: ["\\mathcal{Q}"],
+            calR: ["\\mathcal{R}"],
+            calS: ["\\mathcal{S}"],
+            calT: ["\\mathcal{T}"],
+            calU: ["\\mathcal{U}"],
+            calV: ["\\mathcal{V}"],
+            calX: ["\\mathcal{X}"],
+            calW: ["\\mathcal{W}"],
+            calY: ["\\mathcal{Y}"],
+            calZ: ["\\mathcal{Z}"],
+            bfa: ["\\mathbf{a}"],
+            bfb: ["\\mathbf{b}"],
+            bfc: ["\\mathbf{c}"],
+            bfd: ["\\mathbf{d}"],
+            bfe: ["\\mathbf{e}"],
+            bff: ["\\mathbf{f}"],
+            bfg: ["\\mathbf{g}"],
+            bfh: ["\\mathbf{h}"],
+            bfi: ["\\mathbf{i}"],
+            bfj: ["\\mathbf{j}"],
+            bfk: ["\\mathbf{k}"],
+            bfl: ["\\mathbf{l}"],
+            bfm: ["\\mathbf{m}"],
+            bfn: ["\\mathbf{n}"],
+            bfo: ["\\mathbf{o}"],
+            bfp: ["\\mathbf{p}"],
+            bfq: ["\\mathbf{q}"],
+            bfr: ["\\mathbf{r}"],
+            bfs: ["\\mathbf{s}"],
+            bft: ["\\mathbf{t}"],
+            bfu: ["\\mathbf{u}"],
+            bfv: ["\\mathbf{v}"],
+            bfx: ["\\mathbf{x}"],
+            bfw: ["\\mathbf{w}"],
+            bfy: ["\\mathbf{y}"],
+            bfz: ["\\mathbf{z}"],
+            bfA: ["\\mathbf{A}"],
+            bfB: ["\\mathbf{B}"],
+            bfC: ["\\mathbf{C}"],
+            bfD: ["\\mathbf{D}"],
+            bfE: ["\\mathbf{E}"],
+            bfF: ["\\mathbf{F}"],
+            bfG: ["\\mathbf{G}"],
+            bfH: ["\\mathbf{H}"],
+            bfI: ["\\mathbf{I}"],
+            bfJ: ["\\mathbf{J}"],
+            bfK: ["\\mathbf{K}"],
+            bfL: ["\\mathbf{L}"],
+            bfM: ["\\mathbf{M}"],
+            bfN: ["\\mathbf{N}"],
+            bfO: ["\\mathbf{O}"],
+            bfP: ["\\mathbf{P}"],
+            bfQ: ["\\mathbf{Q}"],
+            bfR: ["\\mathbf{R}"],
+            bfS: ["\\mathbf{S}"],
+            bfT: ["\\mathbf{T}"],
+            bfU: ["\\mathbf{U}"],
+            bfV: ["\\mathbf{V}"],
+            bfX: ["\\mathbf{X}"],
+            bfW: ["\\mathbf{W}"],
+            bfY: ["\\mathbf{Y}"],
+            bfZ: ["\\mathbf{Z}"],
+            zero: ["\\{0\\}"],
+            id: ["\\operatorname\{id\}"],
+            sen: ["\\operatorname\{sen\}"],
+            tg: ["\\operatorname\{tg\}"],
+            ad: ["\\operatorname\{ad\}"],
+            mdc: ["\\operatorname\{mdc\}"],
+            im: ["\\operatorname\{im\}"],
+            Quat: ["\\operatorname\{Quat\}"],
+            Aut: ["\\operatorname\{Aut\}"],
+            Inn: ["\\operatorname\{Inn\}"],
+            orb: ["\\operatorname\{orb\}"],
+            stab: ["\\operatorname\{stab\}"],
+            Rep: ["\\operatorname\{Rep\}"],
+            Hom: ["\\operatorname\{Hom\}"],
+            End: ["\\operatorname\{End\}"],
+            Obj: ["\\operatorname\{Obj\}"],
+            tr: ["\\operatorname\{tr\}"],
+            diam: ["\\operatorname\{diam\}"],
+            diag: ["\\operatorname\{diag\}"],
+            Ind: ["\\operatorname\{Ind\}"],
+            Res: ["\\operatorname\{Res\}"],
+            Set: ["\\operatorname\{Set\}"],
+            coker: ["\\operatorname\{coker\}"],
+            supp: ["\\operatorname\{supp\}"],
+            Tor: ["\\operatorname\{Tor\}"],
+            vspan: ["\\operatorname\{vspan\}"],
+            mmc: ["\\operatorname\{mmc\}"],
+            pint: ["{ \\langle #1,#2 \\rangle }",2],
+            rfrac: ["{ {}^{#1}\\!/_{#2} }",2],
+            norma: ["{ \\Vert #1 \\Vert }",2],
+          },
+        },
+      });
+    </script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../itemParenteses.css" />
+    <link rel="stylesheet" type="text/css" href="../ambTeor.css" />
+    
+    <style>
+      body{
+        font-size: 14pt;
+        font-family: "Helvetica", sans-serif;
+        line-height: 1.5;
+        background-color: rgb(233,227,206);
+        counter-reset: contTeor contProp contLema contObs contDef contItemANI contItemNNI contItemRNI;
+      }
+      
+      h1{
+        background-color: rgb(0,128,0);
+        color: rgb(255,250,250);
+      }
+      
+      .exerc[text]:before {
+        font-weight: bold;
+        content: "Exercício " attr(text)". ";
+      }
+      
+      .sol:before {
+        font-weight: bold;
+        content: "Solução. ";
+      }
+      
+      .cqd:after {
+        content: "\25FC";
+        float:right;
+      }
+      
+      .itemAlfaNoIdent:before {
+        counter-increment: contItemANI;
+        content:"(" counter(contItemANI, lower-alpha)") ";
+      }
+      
+      .itemRomanoNoIdent:before {
+        counter-increment: contItemRNI;
+        content:"(" counter(contItemRNI, lower-roman)") ";
+      }
+      
+      .itemNumericoNoIdent:before {
+        counter-increment: contItemNNI;
+        content:"(" counter(contItemNNI)") ";
+      }
+      
+    </style>
+  </head>
+  
+  <body>
+  
+    <div style="text-align:center"><h1>Lista 10</h1></div>
+    
+    <p class="exerc" text="1">
+      Escreva o número racional \(x \in (0, 1)\) na forma \(x = \frac{a}{10^{\ell}b}\), onde \(a, b \in \bbN\), \(\ell \in \bbN_0\), \(a < b\), \(10 \not\mid a\) e \(\mdc(a, b) = \mdc(10, b) = 1\). Demonstre as seguintes afirmações.
+      <ol class="alfa">
+        <li>O comprimento do pré-período da expansão decimal de \(x\) é \(\ell\).</li>
+        <li>O comprimento do período da expansão decimal de \(x\) é \(|10|_b\).</li>
+      </ol>
+    </p>
+    
+    <p class="sol"></p>
+    
+    <p>
+      Vamos, primeiro, relembrar as definições de pré-período e período de uma fração decimal, vistos na "<a href="https://schcs.github.io/WP/index.php/ensino/fundamentos-de-algebra/expansao-decimal-de-numeros-racionais/">Expansão decimal de números racionais</a>". Seja \([0,q_1q_2\dots]\) uma fração decimal. Dizemos que ela é <em>periódica</em> se existem \(i \ge 0\) e \(j \ge 1\) tais que \(q_{j+k} = q_{k}\), para todo \(k > i\). Sejam \(m\) o menor \(i\) e \(r\) o menor \(j\) que satisfazem essa condição. Então, dizemos que \(m\) é o <em>comprimento do pré-período</em> e que \(r\) é o <em>comprimento do período</em>. A sequência \([q_1\dots q_m]\) é chamada de <em>pré-período</em> e a sequência \([q_{m+1}\dots q_{m+r}]\) é chamada de <em>período</em> da fração. Por exemplo, considere a fração \([0,678909090\dots]\). Note que, se tomarmos \(i = 5\) e \(j = 4\), temos que \(q_{k+4} = q_k\), para todo \(k > 5\).
+      \[
+        [0,\underbrace{67890}_{5}\overbrace{9090}^{4}909090\dots]
+      \]
+      Por exemplo, \(9 = q_{6+4} = q_6 = 9\). Contudo, \(i = 5\) e \(j = 4\) não são, respectivamente, o comprimento do pré-período e o comprimento do período, pois não são os menores valores que satisfazem \(q_{j+k} = q_{k}\), para todo \(k > i\). Os menores valores que satisfazem tal condição são \(m = 3\) e \(r = 2\), ou seja, o comprimento do pré-período é \(3\) e o comprimento do período é \(2\).
+      \[
+        [0,\underbrace{678}_{3}\overbrace{90}^{2}9090909090\dots]
+      \]
+      </p>
+      <p>
+        (a) Lembre-se também, conforme visto na aula "<a href="https://schcs.github.io/WP/index.php/ensino/fundamentos-de-algebra/expansao-decimal-de-numeros-racionais/">Expansão decimal de números racionais</a>", que fazendo \(a_0 = a\), \(q_0 = 0\) e definido as sequências \(a_0, \dots, a_k\) e \(q_0, \dots, q_k\), indutivamente, através da equação
+      \begin{equation}\label{eq:eq1}
+        10a_k = q_{k+1}10^{\ell}b + a_{k+1},
+      \end{equation}
+      obtida através do Teorema da Divisão de Euclides, o número racional \(x = \frac{a}{10^{\ell}b}\) tem expansão decimal escrita como \([0,q_1q_2\dots]\), onde \(q_i \in \{0, \dots, 9\}\) e \(a_i \in \{1, \dots, 10^{\ell}b - 1\}\), para todo \(i\). Observe que, da igualdade acima, segue que \(a_{k+1} \equiv 10a_k \pmod{10^{\ell}b}\). Assim, 
+      \[
+        \begin{array}{ccccc}
+          a_1 & \equiv & 10a \pmod{10^{\ell}b} & & \\
+          a_2 & \equiv & 10a_1 \pmod{10^{\ell}b} & \equiv & 10^2a \pmod{10^{\ell}b} \\
+          a_3 & \equiv & 10a_2 \pmod{10^{\ell}b} & \equiv & 10^3a \pmod{10^{\ell}b} \\
+          & \vdots & & &
+        \end{array}
+      \]
+      Por indução, mostramos que 
+      \begin{equation}\label{eq:eq2}
+        a_{k+1} \equiv 10^{k+1}a \pmod{10^{\ell}b}.
+      \end{equation}
+      Sejam \(m \ge 0\) e \(r \ge 1\) os menores inteiros tais que \(a_m = a_{m+r}\). Vamos mostrar que \(m\) é o comprimento do pré-período de \(x\) e \(r\) é o comprimento do período de \(x\). Note que da equação \(a_m = a_{m+r}\) e da equação \eqref{eq:eq1}, temos que
+      \[
+        q_{m+1}10^lb + a_{m+1} = 10a_m = 10a_{m+r}  = q_{m+r+1} 10^lb + a_{m+r+1}.
+      \]
+      Pela unicidade do Teorema da Divisão Euclides, temos que \(q_{m+1} = q_{m+r+1}\) e que \(a_{m+1} = a_{m+r+1}\). Assim, por indução, concluímos que \(q_{m+i} = q_{m+r+i}\), para todo \(i \ge 1\). Fazendo \(m + i = k\), temos que \(q_{k} = q_{k+r}\), para todo \(k > m\). Uma vez que \(m \ge 0\) e \(r \ge 1\) os menores inteiros tais que \(a_m = a_{m+r}\), então \(m\) é o comprimento do pré-período de \(x\) e \(r\) é o comprimento do período de \(x\). Vamos mostrar que o pré-período de \(x\) não pode ser menor do que \(\ell\). Assim, assuma que \(m < \ell\) e que \(a_m = a_{m+r}\), com \(r \ge 1\). Então, da equação \eqref{eq:eq2}, temos que
+      \[
+        10^ma \equiv a_m = a_{m + r} \equiv 10^{m+r}a \pmod{10^{\ell}b}.
+      \]
+      Isso implica que \(10^{\ell}b \mid 10^{m+r}a - 10^ma = 10^ma(10^r - 1)\), o que é um absurdo, porque \(m < \ell\), \(10 \not\mid a\) e \(\mdc(10, 10^r - 1) = 1\). Com isso, obtemos que o comprimento do pré-período tem que ser maior do que ou igual a \(\ell\). Seja \(s = |10|_b\), isto é, \(s\) é a ordem de \(10\) em \(\bbZ_b\). Em outros termos, isso significa que \(s\) é o menor inteiro positivo tal que \(10^s \equiv 1 \pmod{b}\). Disso, segue que \(a_{s + \ell} = a10^{s + \ell} \equiv a10^{\ell} \equiv a_{\ell} \pmod{10^{\ell}b}\). Dessa forma, temos que \(10^{\ell}b \mid a_{s + \ell} - a_{\ell}\). Mas, como \(a_i \in \{1, \dots, 10^{\ell}b - 1\}\), para todo \(i\), então \(a_{s + \ell} - a_{\ell} = 0\), isto é, \(a_{s + \ell} = a_{\ell}\). Isso demonstra que o comprimento do pré-período tem que ser igual a \(\ell\) e que o comprimento do período tem que ser menor do que ou igual a \(s\).
+    </p>
+    
+    <p>
+      (b) Usando o item anterior, falta mostrar que o comprimento do período é maior do que ou igual a \(s\). Para isso, vamos mostrar que o comprimento do período é um múltiplo de \(s\). Daí, uma vez que o comprimento do período é maior do que ou igual a \(1\), concluiremos que o comprimento do período é exatamente \(s\). Assim, assuma que \(t \ge 1\) é tal que \(a_{\ell} = a_{\ell+t}\). Então
+      \[
+        10^{\ell}a \equiv a_{\ell} = a_{\ell+t} \equiv 10^{\ell+t}a \pmod{10^{\ell}b}.
+      \]
+      Disso, segue que \(10^{\ell}b \mid 10^{\ell}a(10^t - 1)\) e, por conseguinte, que \(b \mid a(10^t - 1)\). Como \(\mdc(a,b) = 1\), então \(b \mid 10^t - 1\). Logo, \(10^t \equiv 1 \pmod{b}\). Uma vez que a ordem de \(10\) em \(\bbZ_b\) é \(s\), segue dos resultados vistos na aula "<a href="https://schcs.github.io/WP/index.php/ensino/fundamentos-de-algebra/a-ordem-de-um-elemento-de-z_n/">A ordem de um elemento de \(\bbZ_n\)</a>", que \(t\) é um múltiplo de \(s\). Com isso finalizamos a questão.
+    <span class="cqd"></span></p>
+
+  </body>
+  
+</html>
+
