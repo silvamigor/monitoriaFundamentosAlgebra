@@ -373,7 +373,7 @@
       \[
         10^ma \equiv a_m = a_{m + r} \equiv 10^{m+r}a \pmod{10^{\ell}b}.
       \]
-      Isso implica que \(10^{\ell}b \mid 10^{m+r}a - 10^ma = 10^ma(10^r - 1)\), o que é um absurdo, porque \(m < \ell\), \(10 \not\mid a\) e \(\mdc(10, 10^r - 1) = 1\). Com isso, obtemos que o comprimento do pré-período tem que ser maior do que ou igual a \(\ell\). Seja \(s = |10|_b\), isto é, \(s\) é a ordem de \(10\) em \(\bbZ_b\). Em outros termos, isso significa que \(s\) é o menor inteiro positivo tal que \(10^s \equiv 1 \pmod{b}\). Disso, segue que \(a_{s + \ell} = a10^{s + \ell} \equiv a10^{\ell} \equiv a_{\ell} \pmod{10^{\ell}b}\). Dessa forma, temos que \(10^{\ell}b \mid a_{s + \ell} - a_{\ell}\). Mas, como \(a_i \in \{1, \dots, 10^{\ell}b - 1\}\), para todo \(i\), então \(a_{s + \ell} - a_{\ell} = 0\), isto é, \(a_{s + \ell} = a_{\ell}\). Isso demonstra que o comprimento do pré-período tem que ser igual a \(\ell\) e que o comprimento do período tem que ser menor do que ou igual a \(s\).
+      Isso implica que \(10^{\ell}b \mid 10^{m+r}a - 10^ma = 10^ma(10^r - 1)\), o que é um absurdo, porque \(m < \ell\), \(10 \not\mid a\) e \(\mdc(10, 10^r - 1) = 1\). Com isso, obtemos que o comprimento do pré-período tem que ser maior do que ou igual a \(\ell\). Seja \(s = |10|_b\), isto é, \(s\) é a ordem de \(10\) em \(\bbZ_b\). Em outros termos, isso significa que \(s\) é o menor inteiro positivo tal que \(10^s \equiv 1 \pmod{b}\). Isso implica que \(b \mid 10^{s} - 1\). Logo, \(10^{\ell}b \mid a10^{\ell}(10^{s} - 1)\), ou seja, \(a10^{s + \ell} \equiv a10^{\ell} \pmod{10^{\ell}b}\). Disso, segue que \(a_{s + \ell} \equiv a10^{s + \ell} \equiv a10^{\ell} \equiv a_{\ell} \pmod{10^{\ell}b}\). Dessa forma, temos que \(10^{\ell}b \mid a_{s + \ell} - a_{\ell}\). Mas, como \(a_i \in \{1, \dots, 10^{\ell}b - 1\}\), para todo \(i\), então \(a_{s + \ell} - a_{\ell} = 0\), isto é, \(a_{s + \ell} = a_{\ell}\). Isso demonstra que o comprimento do pré-período tem que ser igual a \(\ell\) e que o comprimento do período tem que ser menor do que ou igual a \(s\).
     </p>
     
     <p>
@@ -387,4 +387,3 @@
   </body>
   
 </html>
-
