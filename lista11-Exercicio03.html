@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Lista 11 - Exercício 3 </title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+    });
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": { fonts: ["TeX"] },
+        TeX: {
+          equationNumbers: { autoNumber: "AMS" },
+          Macros: {
+            fraka: ["\\mathfrak{a}"],
+            frakb: ["\\mathfrak{b}"],
+            frakc: ["\\mathfrak{c}"],
+            frakd: ["\\mathfrak{d}"],
+            frake: ["\\mathfrak{e}"],
+            frakf: ["\\mathfrak{f}"],
+            frakg: ["\\mathfrak{g}"],
+            frakh: ["\\mathfrak{h}"],
+            fraki: ["\\mathfrak{i}"],
+            frakj: ["\\mathfrak{j}"],
+            frakk: ["\\mathfrak{k}"],
+            frakl: ["\\mathfrak{l}"],
+            frakm: ["\\mathfrak{m}"],
+            frakn: ["\\mathfrak{n}"],
+            frako: ["\\mathfrak{o}"],
+            frakp: ["\\mathfrak{p}"],
+            frakq: ["\\mathfrak{q}"],
+            frakr: ["\\mathfrak{r}"],
+            fraks: ["\\mathfrak{s}"],
+            frakt: ["\\mathfrak{t}"],
+            fraku: ["\\mathfrak{u}"],
+            frakv: ["\\mathfrak{v}"],
+            frakx: ["\\mathfrak{x}"],
+            frakw: ["\\mathfrak{w}"],
+            fraky: ["\\mathfrak{y}"],
+            frakz: ["\\mathfrak{z}"],
+            frakA: ["\\mathfrak{A}"],
+            frakB: ["\\mathfrak{B}"],
+            frakC: ["\\mathfrak{C}"],
+            frakD: ["\\mathfrak{D}"],
+            frakE: ["\\mathfrak{E}"],
+            frakF: ["\\mathfrak{F}"],
+            frakG: ["\\mathfrak{G}"],
+            frakH: ["\\mathfrak{H}"],
+            frakI: ["\\mathfrak{I}"],
+            frakJ: ["\\mathfrak{J}"],
+            frakK: ["\\mathfrak{K}"],
+            frakL: ["\\mathfrak{L}"],
+            frakM: ["\\mathfrak{M}"],
+            frakN: ["\\mathfrak{N}"],
+            frakO: ["\\mathfrak{O}"],
+            frakP: ["\\mathfrak{P}"],
+            frakQ: ["\\mathfrak{Q}"],
+            frakR: ["\\mathfrak{R}"],
+            frakS: ["\\mathfrak{S}"],
+            frakT: ["\\mathfrak{T}"],
+            frakU: ["\\mathfrak{U}"],
+            frakV: ["\\mathfrak{V}"],
+            frakX: ["\\mathfrak{X}"],
+            frakW: ["\\mathfrak{W}"],
+            frakY: ["\\mathfrak{Y}"],
+            frakZ: ["\\mathfrak{Z}"],
+            frakgl: ["\\mathfrak{gl}"],
+            fraksl: ["\\mathfrak{sl}"],
+            bba: ["\\mathbb{a}"],
+            bbb: ["\\mathbb{b}"],
+            bbc: ["\\mathbb{c}"],
+            bbd: ["\\mathbb{d}"],
+            bbe: ["\\mathbb{e}"],
+            bbf: ["\\mathbb{f}"],
+            bbg: ["\\mathbb{g}"],
+            bbh: ["\\mathbb{h}"],
+            bbi: ["\\mathbb{i}"],
+            bbj: ["\\mathbb{j}"],
+            bbk: ["\\mathbb{k}"],
+            bbl: ["\\mathbb{l}"],
+            bbm: ["\\mathbb{m}"],
+            bbn: ["\\mathbb{n}"],
+            bbo: ["\\mathbb{o}"],
+            bbp: ["\\mathbb{p}"],
+            bbq: ["\\mathbb{q}"],
+            bbr: ["\\mathbb{r}"],
+            bbs: ["\\mathbb{s}"],
+            bbt: ["\\mathbb{t}"],
+            bbu: ["\\mathbb{u}"],
+            bbv: ["\\mathbb{v}"],
+            bbx: ["\\mathbb{x}"],
+            bbw: ["\\mathbb{w}"],
+            bby: ["\\mathbb{y}"],
+            bbz: ["\\mathbb{z}"],
+            bbA: ["\\mathbb{A}"],
+            bbB: ["\\mathbb{B}"],
+            bbC: ["\\mathbb{C}"],
+            bbD: ["\\mathbb{D}"],
+            bbE: ["\\mathbb{E}"],
+            bbF: ["\\mathbb{F}"],
+            bbG: ["\\mathbb{G}"],
+            bbH: ["\\mathbb{H}"],
+            bbI: ["\\mathbb{I}"],
+            bbJ: ["\\mathbb{J}"],
+            bbK: ["\\mathbb{K}"],
+            bbL: ["\\mathbb{L}"],
+            bbM: ["\\mathbb{M}"],
+            bbN: ["\\mathbb{N}"],
+            bbO: ["\\mathbb{O}"],
+            bbP: ["\\mathbb{P}"],
+            bbQ: ["\\mathbb{Q}"],
+            bbR: ["\\mathbb{R}"],
+            bbS: ["\\mathbb{S}"],
+            bbT: ["\\mathbb{T}"],
+            bbU: ["\\mathbb{U}"],
+            bbV: ["\\mathbb{V}"],
+            bbX: ["\\mathbb{X}"],
+            bbW: ["\\mathbb{W}"],
+            bbY: ["\\mathbb{Y}"],
+            bbZ: ["\\mathbb{Z}"],
+            cala: ["\\mathcal{a}"],
+            calb: ["\\mathcal{b}"],
+            calc: ["\\mathcal{c}"],
+            cald: ["\\mathcal{d}"],
+            cale: ["\\mathcal{e}"],
+            calf: ["\\mathcal{f}"],
+            calg: ["\\mathcal{g}"],
+            calh: ["\\mathcal{h}"],
+            cali: ["\\mathcal{i}"],
+            calj: ["\\mathcal{j}"],
+            calk: ["\\mathcal{k}"],
+            call: ["\\mathcal{l}"],
+            calm: ["\\mathcal{m}"],
+            caln: ["\\mathcal{n}"],
+            calo: ["\\mathcal{o}"],
+            calp: ["\\mathcal{p}"],
+            calq: ["\\mathcal{q}"],
+            calr: ["\\mathcal{r}"],
+            cals: ["\\mathcal{s}"],
+            calt: ["\\mathcal{t}"],
+            calu: ["\\mathcal{u}"],
+            calv: ["\\mathcal{v}"],
+            calx: ["\\mathcal{x}"],
+            calw: ["\\mathcal{w}"],
+            caly: ["\\mathcal{y}"],
+            calz: ["\\mathcal{z}"],
+            calA: ["\\mathcal{A}"],
+            calB: ["\\mathcal{B}"],
+            calC: ["\\mathcal{C}"],
+            calD: ["\\mathcal{D}"],
+            calE: ["\\mathcal{E}"],
+            calF: ["\\mathcal{F}"],
+            calG: ["\\mathcal{G}"],
+            calH: ["\\mathcal{H}"],
+            calI: ["\\mathcal{I}"],
+            calJ: ["\\mathcal{J}"],
+            calK: ["\\mathcal{K}"],
+            calL: ["\\mathcal{L}"],
+            calM: ["\\mathcal{M}"],
+            calN: ["\\mathcal{N}"],
+            calO: ["\\mathcal{O}"],
+            calP: ["\\mathcal{P}"],
+            calQ: ["\\mathcal{Q}"],
+            calR: ["\\mathcal{R}"],
+            calS: ["\\mathcal{S}"],
+            calT: ["\\mathcal{T}"],
+            calU: ["\\mathcal{U}"],
+            calV: ["\\mathcal{V}"],
+            calX: ["\\mathcal{X}"],
+            calW: ["\\mathcal{W}"],
+            calY: ["\\mathcal{Y}"],
+            calZ: ["\\mathcal{Z}"],
+            bfa: ["\\mathbf{a}"],
+            bfb: ["\\mathbf{b}"],
+            bfc: ["\\mathbf{c}"],
+            bfd: ["\\mathbf{d}"],
+            bfe: ["\\mathbf{e}"],
+            bff: ["\\mathbf{f}"],
+            bfg: ["\\mathbf{g}"],
+            bfh: ["\\mathbf{h}"],
+            bfi: ["\\mathbf{i}"],
+            bfj: ["\\mathbf{j}"],
+            bfk: ["\\mathbf{k}"],
+            bfl: ["\\mathbf{l}"],
+            bfm: ["\\mathbf{m}"],
+            bfn: ["\\mathbf{n}"],
+            bfo: ["\\mathbf{o}"],
+            bfp: ["\\mathbf{p}"],
+            bfq: ["\\mathbf{q}"],
+            bfr: ["\\mathbf{r}"],
+            bfs: ["\\mathbf{s}"],
+            bft: ["\\mathbf{t}"],
+            bfu: ["\\mathbf{u}"],
+            bfv: ["\\mathbf{v}"],
+            bfx: ["\\mathbf{x}"],
+            bfw: ["\\mathbf{w}"],
+            bfy: ["\\mathbf{y}"],
+            bfz: ["\\mathbf{z}"],
+            bfA: ["\\mathbf{A}"],
+            bfB: ["\\mathbf{B}"],
+            bfC: ["\\mathbf{C}"],
+            bfD: ["\\mathbf{D}"],
+            bfE: ["\\mathbf{E}"],
+            bfF: ["\\mathbf{F}"],
+            bfG: ["\\mathbf{G}"],
+            bfH: ["\\mathbf{H}"],
+            bfI: ["\\mathbf{I}"],
+            bfJ: ["\\mathbf{J}"],
+            bfK: ["\\mathbf{K}"],
+            bfL: ["\\mathbf{L}"],
+            bfM: ["\\mathbf{M}"],
+            bfN: ["\\mathbf{N}"],
+            bfO: ["\\mathbf{O}"],
+            bfP: ["\\mathbf{P}"],
+            bfQ: ["\\mathbf{Q}"],
+            bfR: ["\\mathbf{R}"],
+            bfS: ["\\mathbf{S}"],
+            bfT: ["\\mathbf{T}"],
+            bfU: ["\\mathbf{U}"],
+            bfV: ["\\mathbf{V}"],
+            bfX: ["\\mathbf{X}"],
+            bfW: ["\\mathbf{W}"],
+            bfY: ["\\mathbf{Y}"],
+            bfZ: ["\\mathbf{Z}"],
+            zero: ["\\{0\\}"],
+            id: ["\\operatorname\{id\}"],
+            sen: ["\\operatorname\{sen\}"],
+            tg: ["\\operatorname\{tg\}"],
+            ad: ["\\operatorname\{ad\}"],
+            mdc: ["\\operatorname\{mdc\}"],
+            im: ["\\operatorname\{im\}"],
+            Quat: ["\\operatorname\{Quat\}"],
+            Aut: ["\\operatorname\{Aut\}"],
+            Inn: ["\\operatorname\{Inn\}"],
+            orb: ["\\operatorname\{orb\}"],
+            stab: ["\\operatorname\{stab\}"],
+            Rep: ["\\operatorname\{Rep\}"],
+            Hom: ["\\operatorname\{Hom\}"],
+            End: ["\\operatorname\{End\}"],
+            Obj: ["\\operatorname\{Obj\}"],
+            tr: ["\\operatorname\{tr\}"],
+            diam: ["\\operatorname\{diam\}"],
+            diag: ["\\operatorname\{diag\}"],
+            Ind: ["\\operatorname\{Ind\}"],
+            Res: ["\\operatorname\{Res\}"],
+            Set: ["\\operatorname\{Set\}"],
+            coker: ["\\operatorname\{coker\}"],
+            supp: ["\\operatorname\{supp\}"],
+            Tor: ["\\operatorname\{Tor\}"],
+            vspan: ["\\operatorname\{vspan\}"],
+            mmc: ["\\operatorname\{mmc\}"],
+            pint: ["{ \\langle #1,#2 \\rangle }",2],
+            rfrac: ["{ {}^{#1}\\!/_{#2} }",2],
+            norma: ["{ \\Vert #1 \\Vert }",2],
+          },
+        },
+      });
+    </script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../itemParenteses.css" />
+    <link rel="stylesheet" type="text/css" href="../ambTeor.css" />
+    
+    <style>
+      body{
+        font-size: 14pt;
+        font-family: "Helvetica", sans-serif;
+        line-height: 1.5;
+        background-color: rgb(233,227,206);
+        counter-reset: contTeor contProp contLema contObs contDef contItemANI contItemNNI contItemRNI;
+      }
+      
+      h1{
+        background-color: rgb(0,128,0);
+        color: rgb(255,250,250);
+      }
+      
+      .exerc[text]:before {
+        font-weight: bold;
+        content: "Exercício " attr(text)". ";
+      }
+      
+      .sol:before {
+        font-weight: bold;
+        content: "Solução. ";
+      }
+      
+      .cqd:after {
+        content: "\25FC";
+        float:right;
+      }
+      
+      .itemAlfaNoIdent:before {
+        counter-increment: contItemANI;
+        content:"(" counter(contItemANI, lower-alpha)") ";
+      }
+      
+      .itemRomanoNoIdent:before {
+        counter-increment: contItemRNI;
+        content:"(" counter(contItemRNI, lower-roman)") ";
+      }
+      
+      .itemNumericoNoIdent:before {
+        counter-increment: contItemNNI;
+        content:"(" counter(contItemNNI)") ";
+      }
+      
+    </style>
+  </head>
+  
+  <body>
+  
+    <div style="text-align:center"><h1>Lista 11</h1></div>
+    
+    <p class="exerc" text="3">
+      Seja \(p\) um primo tal que \(p \equiv 4 \pmod{4}\). Assuma que \(i\) é um símbolo tal que \(i^2 = \overline{-1} \in \bbZ_p\). Defina
+      \[
+        \bbF_{p^2} = \{a + bi \mid a, b \in \bbZ_p\}
+      \]
+      com as operações
+      \[
+        \begin{array}{rcl}
+          (a_1 + b_1i) + (a_2 + b_2i) & = & (a_1 + a_2) + (b_1 + b_2)i; \\
+          (a_1 + b_1i)(a_2 + b_2i) & = & (a_1a_2 - b_1b_2) + (a_1b_2 + a_2b_1)i.
+        \end{array}
+      \]
+      Mostre que \(\bbF_{p^2}\) é um corpo. Explique porque a condição \(p \equiv 3 \pmod{4}\) é necessária.
+    </p>
+    
+    <p class="sol">
+      Primeiro observe que as operações adição e multiplicação, como definidas, são operações que atribuem a um par ordenado de \(\bbF_{p^2}\) a um elemento de \(\bbF_{p^2}\). Isso quer dizer essa operações são fechadas, que não saem do conjunto. Portanto, estão bem definidas. Vamos mostrar que elas satisfazem as propriedades que caracterizam corpos.
+    </p>
+    
+    <p>
+      &#8226; <em>Associatividade da adição</em>.
+      \[
+        \begin{split}
+          \big((a_1 + b_1i) + (a_2 + b_2i)\big) &+ (a_3 + b_3i) = \big((a_1 + a_2) + (b_1 + b_2)i\big) + (a_3 + b_3i) \\
+          &= \big((a_1 + a_2) + a_3\big) + \big((b_1 + b_2) + b_3\big)i \\
+          \text{pela associatividade de } \bbZ_p &= \big(a_1 + (a_2 + a_3)\big) + \big(b_1 + (b_2 + b_3)\big)i \\
+          &= (a_1 + b_1i) + \big((a_2 + a_3) + (b_2 + b_3)i\big) \\
+          &= (a_1 + b_1i) + \big((a_2 + b_2i) + (a_3 + b_3i)\big).
+        \end{split}
+      \]
+    </p>
+    
+    <p>
+      &#8226; <em>Comutatividade da adição</em>.
+      \[
+        \begin{split}
+          (a_1 + b_1i) + (a_2 + b_2i) &= (a_1 + a_2) + (b_1 + b_2)i \\
+          \text{pela comutatividade de } \bbZ_p &= (a_2 + a_1) + (b_2 + b_1)i \\
+          &= (a_2 + b_2i) + (a_1 + b_1i).
+        \end{split}
+      \]
+    </p>
+    
+    <p>
+      &#8226; <em>Existência do elemento neutro aditivo</em>. Seja \(\overline{0} \in \bbZ_p\) o elemento neutro aditivo, então \(\overline{0} + \overline{0}i\) é o elemento neutro aditivo de \(\bbF_{p^2}\), pois
+      \[
+        (a + bi) + (\overline{0} + \overline{0}i) = a + bi.
+      \]
+    </p>
+    
+    <p>
+      &#8226; <em>Existência do inverso aditivo</em>. Para cada \(x \in \bbZ_p\), temos que \(-x \in \bbZ_p\) é seu inverso aditivo. Logo, \(-a + (-b)i\) é o inverso aditivo de \(a + bi\) em \(\bbF_{p^2}\), pois
+      \[
+        (a + bi) + (-a + (-b)i) = \overline{0} + \overline{0}i.
+      \]
+    </p>
+    
+    <p>
+      &#8226; <em>Associatividade da multiplicação</em>.
+      \[
+        \begin{split}
+          \big((a_1 + b_1i)&(a_2 + b_2i)\big)(a_3 + b_3i) = \big(a_1a_2 - b_1b_2 + (a_1b_2 + a_2b_1)i\big)(a_3 + b_3i) \\
+          &= (a_1a_2 - b_1b_2)a_3 - (a_1b_2 + a_2b_1)b_3 + \big((a_1a_2 - b_1b_2)b_3 + a_3(a_1b_2 + a_2b_1)\big)i \\
+          &= (a_1a_2)a_3 - (b_1b_2)a_3 - (a_1b_2)b_3 - (a_2b_1)b_3 + \big((a_1a_2)b_3 - (b_1b_2)b_3 + a_3(a_1b_2) \\
+          \text{pela associatividade} & \hspace{15cm} + a_3(a_2b_1)\big)i \\
+          \text{e comutatividade} &= a_1(a_2a_3) - b_1(a_3b_2) - a_1(b_2b_3) - b_1(a_2b_3) + \big(a_1(a_2b_3) - (b_2b_3)b_1 + a_1(a_3b_2) \\
+          \text{de } \bbZ_p & \hspace{15cm} + (a_2a_3)b_1\big)i \\
+          &= a_1(a_2a_3 - b_2b_3) - b_1(a_2b_3 + a_3b_2) + \big(a_1(a_2b_3 + a_3b_2) + (a_2a_3 - b_2b_3)b_1\big)i \\
+          &= (a_1 + b_1i)\big(a_2a_3 - b_2b_3 + (a_2b_3 + a_3b_2)i\big) \\
+          &= (a_1 + b_1i)\big((a_2 + b_2i)(a_3 + b_3i)\big).
+        \end{split}
+      \]
+    </p>
+    
+    <p>
+      &#8226; <em>Comutatividade da multiplicação</em>.
+      \[
+        \begin{split}
+          (a_1 + b_1i)(a_2 + b_2i) &= (a_1a_2 - b_1b_2) + (a_1b_2 + a_2b_1)i \\
+          \text{pelas propriedades de } \bbZ_p &= a_2a_1 - b_2b_1 + (a_2b_1 + a_1b_2)i \\
+          &= (a_2 + b_2i)(a_1 + b_1i).
+        \end{split}
+      \]
+    </p>
+    
+    <p>
+      &#8226; <em>Existência do elemento neutro multiplicativo</em>. Como \(\overline{1}\) é o elemento neutro multiplicativo em \(\bbZ_p\), então o elemento neutro multiplicativo de \(\bbF_{p^2}\) é \(\overline{1} + \overline{0}i\), pois
+      \[
+        (a + bi)(\overline{1} + \overline{0}i) = a\overline{1} - b\overline{0} + (a\overline{0} + \overline{1}b)i = a + bi.
+      \]
+    </p>
+    
+    <p>
+      &#8226; <em>Distributividade</em>.
+      \[
+        \begin{split}
+          (a_1 + b_1i)\big((a_2 + b_2i) &+ (a_3 + b_3i)\big) = (a_1 + b_1i)\big(a_2 + a_3 + (b_2 + b_3)i\big) \\
+          &= a_1(a_2 + a_3) - b_1(b_2 + b_3) + \big(a_1(b_2 + b_3) + (a_2 + a_3)b_1\big)i \\
+          &= a_1a_2 + a_1a_3 - b_1b_2 - b_1b_3 + (a_1b_2 + a_1b_3 + a_2b_1 + a_3b_1)i \\
+          &= a_1a_2 - b_1b_2 + (a_1b_2 + a_2b_1)i + a_1a_3 - b_1b_3 + (a_1b_3 + a_3b_1)i \\
+          &= (a_1 + b_1i)(a_2 + b_2i) + (a_1 + b_1i)(a_3 + b_3i).
+        \end{split}
+      \]
+    </p>
+    
+    <p>
+      &#8226; <em>Existência do inverso multiplicativo</em>. Seja \(a + bi \in \bbF_{p^2}\) diferente de \(\overline{0} + \overline{0}i\). Então \(a^2 + b^2 \neq \overline{0}\), logo possui inverso em \(\bbZ_p\), denotado por \(\frac{1}{a^2 + b^2}\). Assim, o inverso multiplicativo de \(a + bi\) é \(\frac{a - bi}{a^2 + b^2}\), pois
+      \[
+        (a + bi)\frac{(a - bi)}{a^2 + b^2} = \frac{a^2 + b^2}{a^2 + b^2} = \overline{1}.
+      \]
+    </p>
+
+    <p>
+      Portanto, \(\bbF_{p^2}\) é um corpo. A condição \(p \equiv 3 \pmod{4}\) é necessária, porque, conforme vimos no <a href="../lista09/lista09-Exercicio01.html">exercício 1</a>, da Lista 9, \(-\overline{1}\) é um quadrado, se \(p \equiv 3 \pmod{4}\). Daí, podemos podemos atribuir um símbolo \(i\) tal que \(i^2 = -\overline{1}\).
+    <span class="cqd"></span></p>
+
+  </body>
+  
+</html>
+
