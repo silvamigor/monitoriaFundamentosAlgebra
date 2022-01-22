@@ -328,7 +328,7 @@
     <div style="text-align:center"><h1>Lista 11</h1></div>
     
     <p class="exerc" text="3">
-      Seja \(p\) um primo tal que \(p \equiv 4 \pmod{4}\). Assuma que \(i\) é um símbolo tal que \(i^2 = \overline{-1} \in \bbZ_p\). Defina
+      Seja \(p\) um primo tal que \(p \equiv 3 \pmod{4}\). Assuma que \(i\) é um símbolo tal que \(i^2 = \overline{-1} \in \bbZ_p\). Defina
       \[
         \bbF_{p^2} = \{a + bi \mid a, b \in \bbZ_p\}
       \]
@@ -433,17 +433,16 @@
     </p>
     
     <p>
-      &#8226; <em>Existência do inverso multiplicativo</em>. Seja \(a + bi \in \bbF_{p^2}\) diferente de \(\overline{0} + \overline{0}i\). Então \(a^2 + b^2 \neq \overline{0}\), logo possui inverso em \(\bbZ_p\), denotado por \(\frac{1}{a^2 + b^2}\). Assim, o inverso multiplicativo de \(a + bi\) é \(\frac{a - bi}{a^2 + b^2}\), pois
+      &#8226; <em>Existência do inverso multiplicativo</em>. Seja \(a + bi \in \bbF_{p^2}\) diferente de \(\overline{0} + \overline{0}i\). Então \(a \neq \overline{0}\) ou \(b \neq \overline{0}\). Se \(a = \overline{0}\) e \(b \neq \overline{0}\), então \(a^2 + b^2 = b^2\). Por \(\bbZ_p\) ser corpo, então, como \(b \neq \overline{0}\), temos que \(b^2 \neq \overline{0}\). Logo, \(a^2 + b^2 \neq \overline{0}\) e, consequentemente, é invertível. De maneira similar, chega-se a esse resultado, supondo que \(a \neq \overline{0}\) e \(b = \overline{0}\). Suponha, agora, que ambos \(a \neq \overline{0}\) e \(b \neq \overline{0}\). Se \(a^2 + b^2 = \overline{0}\), então \(a^2 = -b^2\). Uma vez que \(b \neq \overline{0}\), então \(b^2 \neq \overline{0}\), logo é invertível. Disso segue que \((\frac{a}{b})^2 = -\overline{1}\), ou seja, \(-\overline{1}\) é um quadrado em \(\bbZ_p\). Contudo, \(p \equiv 3 \pmod{4}\), o que significa, conforme o <a href="../lista09/lista09-Exercicio01.html">Exercício 1</a>, da Lista 9, que \(-\overline{1}\) não é um quadrado em \(\bbZ_p\). Isso nos dá um absurdo. Logo, \(a^2 + b^2 \neq \overline{0}\) e, por conseguinte, \(a^2 + b^2\) possui inverso em \(\bbZ_p\), \(\frac{1}{a^2 + b^2}\). Portanto, o inverso multiplicativo de \(a + bi\) é \(\frac{a - bi}{a^2 + b^2}\), pois
       \[
         (a + bi)\frac{(a - bi)}{a^2 + b^2} = \frac{a^2 + b^2}{a^2 + b^2} = \overline{1}.
       \]
     </p>
 
     <p>
-      Portanto, \(\bbF_{p^2}\) é um corpo. A condição \(p \equiv 3 \pmod{4}\) é necessária, porque, conforme vimos no <a href="../lista09/lista09-Exercicio01.html">exercício 1</a>, da Lista 9, \(-\overline{1}\) é um quadrado, se \(p \equiv 3 \pmod{4}\). Daí, podemos podemos atribuir um símbolo \(i\) tal que \(i^2 = -\overline{1}\).
+      Portanto, \(\bbF_{p^2}\) é um corpo.
     <span class="cqd"></span></p>
 
   </body>
   
 </html>
-
