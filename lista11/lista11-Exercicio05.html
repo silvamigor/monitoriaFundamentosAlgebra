@@ -350,7 +350,8 @@
       \[
         \begin{split}
           (a + b)^{n+m} &= \sum_{i = 0}^{n+m}\binom{n+m}{i}a^{i}b^{n+m-i} \\
-          &= \underbrace{b^{n+m} + ab^{n+m-1} + \cdots + a^{n}b^{m}}_{\text{ é igual a } 0, \text{ pois } b^m = 0} + \underbrace{a^{n+1}b^{m-1} + a^{n+2}b^{m-2} + \cdots + a^{n+m}}_{\text{ é igual a } 0, \text{ pois } a^n = 0} \\
+          &= \underbrace{\binom{n+m}{0}b^{n+m} + \binom{n+m}{1}ab^{n+m-1} + \cdots + \binom{n+m}{n}a^{n}b^{m}}_{\text{ é igual a } 0, \text{ pois } b^m = 0} + \\
+          & \hspace{2cm} + \underbrace{\binom{n+m}{n+1}a^{n+1}b^{m-1} + \binom{n+m}{n+2}a^{n+2}b^{m-2} + \cdots + \binom{n+m}{n+m}a^{n+m}}_{\text{ é igual a } 0, \text{ pois } a^n = 0} \\
           &= 0.
         \end{split}
       \]
